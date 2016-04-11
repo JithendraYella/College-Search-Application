@@ -237,7 +237,7 @@
 <!-- where to start -->
 <section class="search_form">
 
-  <form method="GET" action="/search/" autocomplete="false" is="search-form" id="search-form">
+  <form method="GET" action="collegelist.php" autocomplete="false" is="search-form" id="search-form">
 
     <input type="hidden" name="under_investigation">
 
@@ -944,6 +944,6 @@
     <script src="js/picc-analytics.js"></script>
     <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js"></script>
     
-	<b> TARUN </b>
+  
 
 </body></html>
