@@ -197,8 +197,7 @@
 
         <div>
 
-            <a target="_blank" href="https://www.ed.gov/"><span class="ed-logo"></span> DBMS Project Group 22 -
-                Tarun,Siva,Jithendra,Pragna</a>
+            <a target="_blank" href="https://www.ed.gov/"><span class="ed-logo"></span> DBMS Project Group 22 - Tarun,Siva,Jithendra,Pragna</a>
 
         </div>
 
@@ -234,190 +233,39 @@
 <main>
     <!-- background image -->
     <div class="container show-loaded">
-        <div class="results-sort u-group_inline">
-            <div class="u-group_inline-left">
-                <label for="select-sort">Sort:</label>
+        
+            <div class="u-group_inline-left" style="font-size: x-large">
+                <label for="select-sort">College Details :</label>
             </div>
-            <?php
-            $totalstring = 'collegelisting.php?'.$_SERVER['QUERY_STRING'];
-            ?>
-            <div class="u-group_inline-right">
-                <form action="<?php echo $totalstring ?>" method='GET'>
-                    <select id="select-sort" name="sort">
-                        <option value="name:asc" selected="">Name (A to Z)</option>
-                        <option value="advantage:desc">% Earning Above HS Grad</option>
-                        <option value="avg_net_price:asc">Average Annual Cost</option>
-                        <option value="completion_rate:desc">Graduation Rate</option>
-                        <option value="salary:desc">Salary After Attending</option>
-                        <option value="size:asc">Size (Small to Large)</option>
-                    </select>
-                    <button class="button button-primary search-button" id="search-submit" type="submit">
-                        Submit
-                    </button>
-                </form>
+            <div>
+                <?php
+                $conn = oci_connect("sainath", "siva123#", "oracle.cise.ufl.edu:1521/orcl");
+
+                If (!$conn)
+                    echo 'Failed to connect to Oracle';
+                else {
+                    if (isset($_GET['id'])) {
+                        $collegeID = $_GET['id'];
+                    }
+
+                    $stid = oci_parse($conn, "SELECT * FROM COLLEGE1 WHERE UNIID='$collegeID'");
+                    oci_execute($stid);
+
+                    echo "<br>";
+                    echo "<br>";
+                    echo "<table border=\"2\" cellpadding=\"5\" cellspacing=\"2\" style=\"text-align: center;\">\n";
+                    while ($row = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
+                        echo "<tr>\n";
+                        foreach ($row as $item) {
+                            echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+                        }
+                        echo "</tr>\n";
+                    }
+                    echo "</table>\n";
+                }
+                oci_close($conn);
+                ?>
             </div>
-        </div>
-        <div class="queryresult">
-            <?php
-            $conn = oci_connect("sainath", "siva123#", "oracle.cise.ufl.edu:1521/orcl");
-
-            If (!$conn){
-                echo 'Failed to connect to Oracle';
-                }
-            else {
-                echo '<br/>';
-                echo '<br/>';
-                echo "Input Parameters :";
-                echo '<br/>';
-
-                if (isset($_GET['name'])) {
-                    $name = $_GET['name'];
-                }
-
-                if (isset($_GET['zip'])) {
-                    $zip = $_GET['zip'];
-                }
-
-                if (isset($_GET['major'])) {
-                    $major = $_GET['major'];
-                }
-
-
-                if (isset($_GET['size'])) {
-                    $size = array();
-                    $entirestring = $_SERVER['QUERY_STRING'];
-
-                    if (strpos($entirestring, 'small') !== false && strpos($entirestring, 'medium') !== true && strpos($entirestring, 'large') !== true) {
-                        $size[0] = 'small';
-                    } elseif (strpos($entirestring, 'small') !== false && strpos($entirestring, 'medium') !== false && strpos($entirestring, 'large') !== true) {
-                        $size[0] = 'small';
-                        $size[1] = 'medium';
-                    } elseif (strpos($entirestring, 'small') !== false && strpos($entirestring, 'medium') !== false && strpos($entirestring, 'large') !== false) {
-                        $size[0] = 'small';
-                        $size[1] = 'medium';
-                        $size[2] = 'large';
-                    } elseif (strpos($entirestring, 'small') !== true && strpos($entirestring, 'medium') !== false && strpos($entirestring, 'large') !== true) {
-                        $size[0] = 'medium';
-                    } elseif (strpos($entirestring, 'small') !== true && strpos($entirestring, 'medium') !== false && strpos($entirestring, 'large') !== false) {
-                        $size[0] = 'medium';
-                        $size[1] = 'large';
-                    } elseif (strpos($entirestring, 'small') !== true && strpos($entirestring, 'medium') !== true && strpos($entirestring, 'large') !== false) {
-                        $size[0] = 'large';
-                    } elseif (strpos($entirestring, 'small') !== false && strpos($entirestring, 'medium') !== true && strpos($entirestring, 'large') !== false) {
-                        $size[0] = 'small';
-                        $size[1] = 'large';
-                    }
-                }
-
-
-                if (isset($_GET['control'])) {
-                    $control = array();
-                    $entirestring = $_SERVER['QUERY_STRING'];
-
-                    if (strpos($entirestring, 'public') !== false && strpos($entirestring, 'private') !== true && strpos($entirestring, 'profit') !== true) {
-                        $control[0] = 'public';
-                    } elseif (strpos($entirestring, 'public') !== false && strpos($entirestring, 'private') !== false && strpos($entirestring, 'profit') !== true) {
-                        $control[0] = 'public';
-                        $control[1] = 'private';
-                    } elseif (strpos($entirestring, 'public') !== false && strpos($entirestring, 'private') !== false && strpos($entirestring, 'profit') !== false) {
-                        $control[0] = 'public';
-                        $control[1] = 'private';
-                        $control[2] = 'profit';
-                    } elseif (strpos($entirestring, 'public') !== true && strpos($entirestring, 'private') !== false && strpos($entirestring, 'profit') !== true) {
-                        $control[0] = 'private';
-                    } elseif (strpos($entirestring, 'public') !== true && strpos($entirestring, 'private') !== false && strpos($entirestring, 'profit') !== false) {
-                        $control[0] = 'private';
-                        $control[1] = 'profit';
-                    } elseif (strpos($entirestring, 'public') !== true && strpos($entirestring, 'private') !== true && strpos($entirestring, 'profit') !== false) {
-                        $control[0] = 'profit';
-                    } elseif (strpos($entirestring, 'public') !== false && strpos($entirestring, 'private') !== true && strpos($entirestring, 'profit') !== false) {
-                        $control[0] = 'public';
-                        $control[1] = 'profit';
-                    }
-
-                }
-
-                /*if (isset($_GET['control'])) {
-                    $controlarray = array();
-                    foreach ($_GET['control'] as $ctrl) {
-
-                    }
-                }*/
-
-                if (isset($_GET['serving'])) {
-                    $serving = $_GET['serving'];
-                }
-
-                if (isset($_GET['religious'])) {
-                    $religious = $_GET['religious'];
-                }
-
-                echo '<br/>';
-                echo $name;
-                echo '<br/>';
-                echo $zip;
-                echo '<br/>';
-                echo $major;
-                echo '<br/>';
-                echo $serving;
-                echo '<br/>';
-                echo $religious;
-                echo '<br/>';
-                if (isset($size)){
-                for ($x = 0; $x < count($size); $x++) {
-                    echo $size[$x];
-                    echo '<br/>';
-                }}
-                if (isset($control)){
-                for ($y = 0; $y < count($control); $y++) {
-                    echo $control[$y];
-                    echo '<br/>';
-                }}
-
-
-                $stid = oci_parse($conn, 'SELECT * FROM COLLEGE1');
-                oci_execute($stid);
-
-                echo "<p><h2>Results:</h2></p> ";
-                echo "<br>";
-                echo "<br>";
-                echo "<table border=\"2\" cellpadding=\"5\" cellspacing=\"2\" style=\"text-align: center;\">";
-                echo "<tr style=\"text-align: center;\">";
-                echo "<th style=\"width: 100px;\">S No.</th>";
-                echo "<th style=\"width: 600px;\">College Name</th>";
-                echo "</tr>\n";
-                /*$ncols = oci_num_fields($stid);
-                for ($i = 1; $i <= $ncols; $i++) {
-                    $column_name  = oci_field_name($stid, $i);
-
-                    echo "<tr>";
-                    echo "<td>$i</td>";
-                    echo "<td>$column_name</td>";
-                    echo "</tr>\n";
-                }*/
-
-                $count = 0;
-                while (($row = oci_fetch_object($stid)) != false) {
-                    $universityID = htmlentities($row->UNIID, ENT_QUOTES, "UTF-8");
-                    $universityName = htmlentities($row->NAME, ENT_QUOTES, "UTF-8");
-                    echo "<tr>\n";
-                    echo "<td>".(++$count)."</td>";
-                    echo "<td><a href=\"collegedetails.php?id=$universityID\">".$universityName."</a></td>";
-
-                    /*foreach ($row as $item) {
-                        $count++;
-                        echo "<td>$count</td>";
-                        echo "<td><a href=\"collegedetails.php?id='.($item[0]).'\">" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</a></td>\n";
-                    }*/
-                    echo "</tr>\n";
-                }
-
-                echo "</table>\n";
-            }
-
-
-            oci_close($conn);
-            ?>
         </div>
 
 
@@ -431,8 +279,12 @@
 </main>
 
 
+
+
+
 <script src="js/picc-analytics.js"></script>
 <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js"></script>
+
 
 
 </body></html>
