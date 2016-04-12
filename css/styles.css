@@ -150,7 +150,8 @@ ol.disc li, .u-unordered_list li {
 }
 .group_inline, .u-group_inline {
     display: table;
-    width: 100%;
+    width: 70%;
+	margin-top: 10px;
 }
 .group_inline-left, .u-group_inline-left {
     display: table-cell;
