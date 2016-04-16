@@ -1,6 +1,7 @@
 <html lang="en">
 <head>
-
+	
+	
     <!-- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
@@ -246,7 +247,7 @@
                     }
 					?>
 					<div class="u-group_inline-left" style="font-size: x-large">
-						<label for="select-sort">College Details :</label>
+						<label class = "detailslabel" for="select-sort">College Details :</label>
 					</div>
 					<?php
 
@@ -266,16 +267,16 @@
 							echo "ADDRESS";
 						echo "</th>";
 						echo "<th>";
-							echo "LATITUDE";
+							echo "LATITUDE ";
 						echo "</th>";
 						echo "<th>";
-							echo "LONGITUDE";
+							echo "LONGITUDE ";
 						echo "</th>";
 						echo "<th>";
 							echo "ACCREDITATIONS";
 						echo "</th>";
 					echo "</tr>";
-                    echo "<table border=\"2\" cellpadding=\"5\" cellspacing=\"2\" style=\"text-align: center;\">\n";
+                    //echo "<table border=\"2\" cellpadding=\"5\" cellspacing=\"2\" style=\"text-align: center;\">\n";
                     while ($row = oci_fetch_array($stid1, OCI_ASSOC + OCI_RETURN_NULLS)) {
                         echo "<tr>\n";
                         foreach ($row as $item) {
@@ -288,7 +289,7 @@
 					//echo Relevant Links
 					?>
 					<div class="u-group_inline-left" style="font-size: x-large">
-						<label for="select-sort">Relevant Links :</label>
+						<label class = "detailslabel" for="select-sort">Relevant Links :</label>
 					</div>
 					<?php
 					$stid2 = oci_parse($conn, "SELECT HOMEPAGE, FINANCIALAID, COSTESTIMATIONS FROM RELEVANTLINKS WHERE UNIID='$collegeID'");
@@ -321,7 +322,7 @@
 					//Echo cost details
 					?>
 					<div class="u-group_inline-left" style="font-size: x-large">
-						<label for="select-sort">Cost Details :</label>
+						<label class = "detailslabel" for="select-sort">Cost Details :</label>
 					</div>
 					<?php
 					$stid3 = oci_parse($conn, "SELECT COSTOFATTENDANCE as AvgCost, TUITION_IN, TUITION_OUT FROM COST WHERE UNIID='$collegeID'");
@@ -331,6 +332,17 @@
                     echo "<br>";
                     echo "<br>";
                     echo "<table border=\"2\" cellpadding=\"5\" cellspacing=\"2\" style=\"text-align: center;\">\n";
+					echo "<tr>";
+						echo "<th>";
+							echo "AVGCOST OF ATTENDENCE";
+						echo "</th>";
+						echo "<th>";
+							echo "TUITION_IN";
+						echo "</th>";
+						echo "<th>";
+							echo "TUITION_OUT";
+						echo "</th>";
+					echo "</tr>";
                     while ($row = oci_fetch_array($stid3, OCI_ASSOC + OCI_RETURN_NULLS)) {
                         echo "<tr>\n";
                         foreach ($row as $item) {
@@ -343,7 +355,7 @@
 					//Echo Financial AID details
 					?>
 					<div class="u-group_inline-left" style="font-size: x-large">
-						<label for="select-sort">Financial Aid :</label>
+						<label class = "detailslabel" for="select-sort">Financial Aid :</label>
 					</div>
 					<?php
 					$stid4 = oci_parse($conn, "SELECT AVGSTUDENTDEBT, STUDENTSCOUNT, LOANRATE FROM FINANCIALAID1 WHERE UNIID='$collegeID'");
@@ -353,6 +365,17 @@
                     echo "<br>";
                     echo "<br>";
                     echo "<table border=\"2\" cellpadding=\"5\" cellspacing=\"2\" style=\"text-align: center;\">\n";
+					echo "<tr>";
+						echo "<th>";
+							echo "AVERAGE STUDENT DEBT";
+						echo "</th>";
+						echo "<th>";
+							echo "STUDENT COUNT";
+						echo "</th>";
+						echo "<th>";
+							echo "LOAN RATE";
+						echo "</th>";
+					echo "</tr>";
                     while ($row = oci_fetch_array($stid4, OCI_ASSOC + OCI_RETURN_NULLS)) {
                         echo "<tr>\n";
                         foreach ($row as $item) {
@@ -365,7 +388,7 @@
 					//Echo Outcome details
 					?>
 					<div class="u-group_inline-left" style="font-size: x-large">
-						<label for="select-sort">Outcome :</label>
+						<label class = "detailslabel" for="select-sort">Outcome :</label>
 					</div>
 					<?php
 					$stid5 = oci_parse($conn, "SELECT TRANSFERRATE, GRADUATIONRATE, EARNINGS,RETENTIONRATE FROM OUTCOME1 WHERE UNIID='$collegeID'");
@@ -375,6 +398,20 @@
                     echo "<br>";
                     echo "<br>";
                     echo "<table border=\"2\" cellpadding=\"5\" cellspacing=\"2\" style=\"text-align: center;\">\n";
+					echo "<tr>";
+						echo "<th>";
+							echo "TRANSFER RATE";
+						echo "</th>";
+						echo "<th>";
+							echo "GRADUATION RATE";
+						echo "</th>";
+						echo "<th>";
+							echo "EARNINGS";
+						echo "</th>";
+						echo "<th>";
+							echo "RETENTION RATE";
+						echo "</th>";
+					echo "</tr>";
                     while ($row = oci_fetch_array($stid5, OCI_ASSOC + OCI_RETURN_NULLS)) {
                         echo "<tr>\n";
                         foreach ($row as $item) {
@@ -387,7 +424,7 @@
 					//Echo StudentBody details
 					?>
 					<div class="u-group_inline-left" style="font-size: x-large">
-						<label for="select-sort">Student Body :</label>
+						<label class = "detailslabel" for="select-sort">Student Body :</label>
 					</div>
 					<?php
 					$stid6 = oci_parse($conn, "SELECT STRENGTH, (DEMOGRAPHICS_ASIAN*100) as ASIANS, DEMOGRAPHICS_BLACK*100 as BLACK, DEMOGRAPHICS_HISPANIC*100 as HISPANIC, DEMOGRAPHICS_OTHER*100 as OTHER, DEMOGRAPHICS_WHITE*100 as WHITE, DEMOGRAPHICS_UNKNOWN*100 as UNKNOWN FROM STUDENTBODY WHERE UNIID='$collegeID'");
@@ -397,6 +434,29 @@
                     echo "<br>";
                     echo "<br>";
                     echo "<table border=\"2\" cellpadding=\"5\" cellspacing=\"2\" style=\"text-align: center;\">\n";
+					echo "<tr>";
+						echo "<th>";
+							echo "STRENGTH";
+						echo "</th>";
+						echo "<th>";
+							echo "ASIANS PERCENTAGE";
+						echo "</th>";
+						echo "<th>";
+							echo "BLACK PERCENTAGE";
+						echo "</th>";
+						echo "<th>";
+							echo "HISPANIC PERCENTAGE";
+						echo "</th>";
+						echo "<th>";
+							echo "OTHERS PERCENTAGE";
+						echo "</th>";
+						echo "<th>";
+							echo "WHITE PERCENTAGE";
+						echo "</th>";
+						echo "<th>";
+							echo "UNKNOWN PERCENTAGE";
+						echo "</th>";						
+					echo "</tr>";
                     while ($row = oci_fetch_array($stid6, OCI_ASSOC + OCI_RETURN_NULLS)) {
                         echo "<tr>\n";
                         foreach ($row as $item) {
@@ -409,7 +469,7 @@
 					//Echo Admissions details
 					?>
 					<div class="u-group_inline-left" style="font-size: x-large">
-						<label for="select-sort">Admissions :</label>
+						<label class = "detailslabel" for="select-sort">Admissions :</label>
 					</div>
 					<?php
 					$stid7 = oci_parse($conn, "SELECT ADMISSIONRATE, SATSCORE, ACTSCORE FROM ADMISSIONS WHERE UNIID='$collegeID'");
@@ -419,6 +479,17 @@
                     echo "<br>";
                     echo "<br>";
                     echo "<table border=\"2\" cellpadding=\"5\" cellspacing=\"2\" style=\"text-align: center;\">\n";
+					echo "<tr>";
+						echo "<th>";
+							echo "ADMISSIONRATE";
+						echo "</th>";
+						echo "<th>";
+							echo "SAT SCORE";
+						echo "</th>";
+						echo "<th>";
+							echo "ACT SCORE";
+						echo "</th>";
+					echo "</tr>";
                     while ($row = oci_fetch_array($stid7, OCI_ASSOC + OCI_RETURN_NULLS)) {
                         echo "<tr>\n";
                         foreach ($row as $item) {
@@ -431,11 +502,13 @@
 					//Echo ACADEMICS details
 					?>
 					<div class="u-group_inline-left" style="font-size: x-large">
-						<label for="select-sort">Academics :</label>
+						<label class = "detailslabel" for="select-sort">Academics :</label>
 					</div>
 					<?php
-					$stid8 = oci_parse($conn, "SELECT * FROM ACADEMICS1 WHERE UNIID='$collegeID'");
+					//$stid8 = oci_parse($conn, "SELECT AGRICULTURE_PROGRAMS, ENGINEERING_PROGRAMS, CS_IS_PROGRAMS, ARTS_PROGRAMS, FOREIGNLANGUAGE_PROGRAMS, PSYCHOLOGY_PROGRAMS, LAW_PROGRAMS, HEALTH_PROGRAMS, SOCIALSCIENCES_PROGRAMS, BUSINESSANDMANAGEMENT_PROGRAMS, INTERANDOTHER_PROGRAMS FROM ACADEMICS1 WHERE UNIID='$collegeID'");
 					
+					$stid8 = oci_parse($conn, "SELECT column_name FROM all_tab_cols WHERE  table_name = 'ACADEMICS1'AND column_name NOT IN ( 'UNIID' )");
+			
                     oci_execute($stid8);
 					
                     echo "<br>";
@@ -444,7 +517,7 @@
                     while ($row = oci_fetch_array($stid8, OCI_ASSOC + OCI_RETURN_NULLS)) {
                         echo "<tr>\n";
                         foreach ($row as $item) {
-                            echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+                            echo "    <td>" . ($item !== "0" ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
                         }
                         echo "</tr>\n";
                     }
@@ -452,21 +525,35 @@
 					
 					//Echo OVERALL TRENDS details
 					?>
-					<div class="u-group_inline-left" style="font-size: x-large">
-						<label for="select-sort">Overall Trends :</label>
-					</div>
+						<label class = "detailslabel" for="select-sort">Overall Trends :</label>
 					<?php
-					$stid9 = oci_parse($conn, "SELECT * FROM OVERALLTRENDS WHERE UNIID='$collegeID'");
+					
+					//echo "Overall Trends :";
+					$stid9 = oci_parse($conn, "SELECT YEAR, TUITIONIN, TUITIONOUT, STUDENTCOUNT FROM OVERALLTRENDS WHERE UNIID='$collegeID'");
 					
                     oci_execute($stid9);
 					
                     echo "<br>";
                     echo "<br>";
-                    echo "<table border=\"2\" cellpadding=\"5\" cellspacing=\"2\" style=\"text-align: center;\">\n";
+                    echo "<table class=\"now\">\n";
+					echo "<tr >";
+						echo "<th class=\"one\">";
+							echo "YEAR";
+						echo "</th>";
+						echo "<th class=\"one\">";
+							echo "TUITION IN";
+						echo "</th>";
+						echo "<th class=\"one\">";
+							echo "TUITION OUT";
+						echo "</th>";
+						echo "<th class=\"one\">";
+							echo "STUDENT COUNT";
+						echo "</th>";						
+					echo "</tr>";
                     while ($row = oci_fetch_array($stid9, OCI_ASSOC + OCI_RETURN_NULLS)) {
                         echo "<tr>\n";
                         foreach ($row as $item) {
-                            echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+                            echo "    <td class=\"two\">" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
                         }
                         echo "</tr>\n";
                     }
