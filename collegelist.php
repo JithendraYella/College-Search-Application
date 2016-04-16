@@ -259,6 +259,7 @@
         </div>
         <div class="queryresult">
             <?php
+
             $conn = oci_connect("sainath", "siva123#", "oracle.cise.ufl.edu:1521/orcl");
 
             If (!$conn){
@@ -269,20 +270,64 @@
                 echo '<br/>';
                 echo "Input Parameters :";
                 echo '<br/>';
-
-                if (isset($_GET['name'])) {
-                    $name = $_GET['name'];
+				
+				$stid = oci_parse($conn, "DELETE FROM temp1");
+                oci_execute($stid);
+				$stid = oci_parse($conn, "DELETE FROM temp2");
+                oci_execute($stid);
+				
+				if (isset($_GET['major'])) {
+                    $prog = $_GET['major'];
+					if(strcmp($prog,'Any')==0){
+						//echo "Any selected<br />";
+						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM ACADEMICS1");
+						oci_execute($thisisit);
+					}
+					else{
+						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM ACADEMICS1 WHERE $prog > 0");
+						oci_execute($thisisit);
+					}
                 }
-
+				
+				if (isset($_GET['state'])) {
+                    $state = $_GET['state'];
+					$thisisit = oci_parse($conn, "INSERT INTO temp2 SELECT UNIID FROM COLLEGE1 WHERE state LIKE '%%' AND UNIID IN (SELECT UNIID FROM temp1)");
+					oci_execute($thisisit);
+					$stid = oci_parse($conn, "DELETE FROM temp1");
+					oci_execute($stid);
+                }
+				
                 if (isset($_GET['zip'])) {
                     $zip = $_GET['zip'];
+					//echo "$zip";
+					if($zip > 0){
+						echo "$zip";
+						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM COLLEGE1 WHERE zip < $zip+100 AND zip > $zip-100 AND UNIID IN (SELECT UNIID FROM temp2)");
+						oci_execute($thisisit);
+					}
+					else{
+						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM COLLEGE1 WHERE UNIID IN (SELECT UNIID FROM temp2)");
+						oci_execute($thisisit);
+					}
+					$stid = oci_parse($conn, "DELETE FROM temp2");
+					oci_execute($stid);
                 }
-
-                if (isset($_GET['major'])) {
-                    $major = $_GET['major'];
+				
+				if (isset($_GET['serving'])) {
+                    $miss = $_GET['serving'];
+					if(strcmp($miss,'Any')==0){
+						//echo "Any selected<br />";
+						$thisisit = oci_parse($conn, "INSERT INTO temp2 SELECT UNIID FROM UNITYPE WHERE UNIID IN (SELECT UNIID FROM temp1)");
+						oci_execute($thisisit);
+					}
+					else{
+						$thisisit = oci_parse($conn, "INSERT INTO temp2 SELECT UNIID FROM UNITYPE WHERE $miss > 0 AND UNIID IN (SELECT UNIID FROM temp1)");
+						oci_execute($thisisit);
+					}
+					$stid = oci_parse($conn, "DELETE FROM temp1");
+					oci_execute($stid);
                 }
-
-
+				
                 if (isset($_GET['size'])) {
                     $size = array();
                     $entirestring = $_SERVER['QUERY_STRING'];
@@ -344,24 +389,22 @@
                     }
                 }*/
 
-                if (isset($_GET['serving'])) {
-                    $serving = $_GET['serving'];
-                }
-
                 if (isset($_GET['religious'])) {
                     $religious = $_GET['religious'];
                 }
 
                 echo '<br/>';
-                echo $name;
+                //echo $name;
                 echo '<br/>';
+				echo $state;
+				echo '<br/>';
                 echo $zip;
                 echo '<br/>';
-                echo $major;
+                echo $prog;
                 echo '<br/>';
-                echo $serving;
+                echo $miss;
                 echo '<br/>';
-                echo $religious;
+                //echo $religious;
                 echo '<br/>';
                 if (isset($size)){
                 for ($x = 0; $x < count($size); $x++) {
@@ -374,8 +417,15 @@
                     echo '<br/>';
                 }}
 
-
-                $stid = oci_parse($conn, 'SELECT * FROM COLLEGE1');
+				if (isset($_GET['name'])) {
+                    $name = $_GET['name'];
+					$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM COLLEGE1 WHERE name LIKE '%$name%' AND UNIID IN (SELECT UNIID FROM temp2)");
+					oci_execute($thisisit);
+					$stid = oci_parse($conn, "DELETE FROM temp2");
+					oci_execute($stid);
+                }
+				
+                $stid = oci_parse($conn, "SELECT * FROM COLLEGE1 WHERE UNIID IN (SELECT UNIID FROM temp1)");
                 oci_execute($stid);
 
                 echo "<p><h2>Results:</h2></p> ";
