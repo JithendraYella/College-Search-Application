@@ -237,7 +237,7 @@
 <!-- where to start -->
 <section class="search_form">
 
-  <form method="GET" action="/search/" autocomplete="false" is="search-form" id="search-form">
+  <form method="GET" action="collegelist.php" autocomplete="false" is="search-form" id="search-form">
 
     <input type="hidden" name="under_investigation">
 
@@ -265,83 +265,29 @@
 
         <label for="major">Choose a program
           <select name="major" id="major">
-            <option selected="" value="">Any</option>
+            <option selected="" value="Any">Any</option>
             
-            <option value="agriculture">Agriculture, Agriculture Operations, and Related Sciences</option>
+            <option value="AGRICULTURE_PROGRAMS">Agriculture Programs</option>
             
-            <option value="architecture">Architecture and Related Services</option>
+            <option value="ENGINEERING_PROGRAMS">Engineering Programs</option>
             
-            <option value="ethnic_cultural_gender">Area, Ethnic, Cultural, Gender, and Group Studies</option>
+            <option value="CS_IS_PROGRAMS">Computer Science and Information Systems Programs</option>
             
-            <option value="biological">Biological and Biomedical Sciences</option>
+            <option value="ARTS_PROGRAMS">Arts Programs</option>
             
-            <option value="business_marketing">Business, Management, Marketing, and Related Support Services</option>
+            <option value="FOREIGNLANGUAGE_PROGRAMS">Foreign Language Programs</option>
             
-            <option value="communication">Communication, Journalism, and Related Programs</option>
+            <option value="PSYCHOLOGY_PROGRAMS">Psychology Programs</option>
             
-            <option value="communications_technology">Communications Technologies/Technicians and Support Services</option>
+            <option value="LAW_PROGRAMS">Law Programs</option>
             
-            <option value="computer">Computer and Information Sciences and Support Services</option>
+            <option value="HEALTH_PROGRAMS">Health Programs</option>
             
-            <option value="construction">Construction Trades</option>
+            <option value="SOCIALSCIENCES_PROGRAMS">Social Sciences Programs</option>
             
-            <option value="education">Education</option>
+            <option value="BUSINESSANDMANAGEMENT_PROGRAMS">Business and Management Programs</option>
             
-            <option value="engineering">Engineering</option>
-            
-            <option value="engineering_technology">Engineering Technologies and Engineering-Related Fields</option>
-            
-            <option value="english">English Language and Literature/Letters</option>
-            
-            <option value="family_consumer_science">Family and Consumer Sciences/Human Sciences</option>
-            
-            <option value="language">Foreign Languages, Literatures, and Linguistics</option>
-            
-            <option value="health">Health Professions and Related Programs</option>
-            
-            <option value="history">History</option>
-            
-            <option value="security_law_enforcement">Homeland Security, Law Enforcement, Firefighting and Related Protective Services</option>
-            
-            <option value="legal">Legal Professions and Studies</option>
-            
-            <option value="humanities">Liberal Arts and Sciences, General Studies and Humanities</option>
-            
-            <option value="library">Library Science</option>
-            
-            <option value="mathematics">Mathematics and Statistics</option>
-            
-            <option value="mechanic_repair_technology">Mechanic and Repair Technologies/Technicians</option>
-            
-            <option value="military">Military Technologies and Applied Sciences</option>
-            
-            <option value="multidiscipline">Multi/Interdisciplinary Studies</option>
-            
-            <option value="resources">Natural Resources and Conservation</option>
-            
-            <option value="parks_recreation_fitness">Parks, Recreation, Leisure, and Fitness Studies</option>
-            
-            <option value="personal_culinary">Personal and Culinary Services</option>
-            
-            <option value="philosophy_religious">Philosophy and Religious Studies</option>
-            
-            <option value="physical_science">Physical Sciences</option>
-            
-            <option value="precision_production">Precision Production</option>
-            
-            <option value="psychology">Psychology</option>
-            
-            <option value="public_administration_social_service">Public Administration and Social Service Professions</option>
-            
-            <option value="science_technology">Science Technologies/Technicians</option>
-            
-            <option value="social_science">Social Sciences</option>
-            
-            <option value="theology_religious_vocation">Theology and Religious Vocations</option>
-            
-            <option value="transportation">Transportation and Materials Moving</option>
-            
-            <option value="visual_performing">Visual and Performing Arts</option>
+            <option value="INTERANDOTHER_PROGRAMS">Interdisciplinary and other Programs</option>
             
           </select>
         </label>
@@ -373,7 +319,7 @@
             Select a state
           </div>
 
-          <multi-select><select name="state" class="select-state" aria-labelledby="label-select-state" multiple="multiple" style="display: none;" aria-hidden="true">
+          <select name="state" class="select-state" aria-labelledby="label-select-state" style="display: none;" aria-hidden="true">
                 
                 
                 <option value="AL">Alabama</option>
@@ -608,11 +554,9 @@
                 Add<br>State
               </button> -->
 			  
-              <button title="Remove State" class="button button-remove" type="button">
-                <i class="fa fa-times-circle"></i>
-              </button>
+              
             </div>
-          </div></multi-select>
+          </div>
 
         </div>
 
@@ -620,7 +564,7 @@
         <div class="group_inline">
 
           <label class="group_inline-left" for="zip-code">Enter a ZIP code
-            <input type="number" autocapitalize="off" autocorrect="off" autocomplete="off" placeholder="e.g., 45400" name="zip" id="zip-code">
+            <input type="number" autocapitalize="off" autocorrect="off" autocomplete="off" placeholder="e.g., 32608" name="zip" id="zip-code">
           </label>
         </div>
 
@@ -751,158 +695,27 @@
 
         <label for="special">Specialized mission
           <select name="serving" id="special">
-            <option selected="" value="">Any</option>
+            <option selected="" value="Any">Any</option>
             
-            <option value="women_only">Women-Only</option>
+            <option value="SPECIALIZEDMISSIONS_WOMENONLY">Women-Only</option>
             
-            <option value="men_only">Men-Only</option>
+            <option value="SPECIALIZEDMISSIONS_MENONLY">Men-Only</option>
             
-            <option value="aanipi">Asian American and Native American Pacific Islander-Serving Institution</option>
+            <option value="SPECIALIZEDMISSIONS_AANAPII">Asian American and Native American Pacific Islander-Serving Institution</option>
             
-            <option value="annh">Alaska Native and Native Hawaiian-Serving Institution</option>
+            <option value="SPECIALIZEDMISSIONS_ANNHI">Alaska Native and Native Hawaiian-Serving Institution</option>
             
-            <option value="hispanic">Hispanic-Serving Institution</option>
+            <option value="SPECIALIZEDMISSIONS_HSI">Hispanic-Serving Institution</option>
             
-            <option value="historically_black">Historically Black College and University</option>
+            <option value="SPECIALIZEDMISSIONS_HBCU">Historically Black College and University</option>
             
-            <option value="nant">Native American Non-Tribal Institution</option>
+            <option value="SPECIALIZEDMISSIONS_NANTI">Native American Non-Tribal Institution</option>
             
-            <option value="predominantly_black">Predominantly Black Institution</option>
+            <option value="SPECIALIZEDMISSIONS_PBI">Predominantly Black Institution</option>
             
-            <option value="tribal">Tribal College and University</option>
-            
-          </select>
-        </label>
-
-        <label for="affiliation">Religious affiliation
-          <select name="religious" id="affiliation">
-            <option selected="" value="">Any</option>
-            
-            <option value="51">African Methodist Episcopal</option>
-            
-            <option value="24">African Methodist Episcopal Zion Church</option>
-            
-            <option value="52">American Baptist</option>
-            
-            <option value="22">American Evangelical Lutheran Church</option>
-            
-            <option value="53">American Lutheran</option>
-            
-            <option value="27">Assemblies of God Church</option>
-            
-            <option value="54">Baptist</option>
-            
-            <option value="28">Brethren Church</option>
-            
-            <option value="34">Christ and Missionary Alliance Church</option>
-            
-            <option value="61">Christian Church (Disciples of Christ)</option>
-            
-            <option value="48">Christian Churches and Churches of Christ</option>
-            
-            <option value="55">Christian Methodist Episcopal</option>
-            
-            <option value="35">Christian Reformed Church</option>
-            
-            <option value="58">Church of Brethren</option>
-            
-            <option value="57">Church of God</option>
-            
-            <option value="59">Church of the Nazarene</option>
-            
-            <option value="74">Churches of Christ</option>
-            
-            <option value="60">Cumberland Presbyterian</option>
-            
-            <option value="101">Ecumenical Christian</option>
-            
-            <option value="50">Episcopal Church, Reformed</option>
-            
-            <option value="102">Evangelical Christian</option>
-            
-            <option value="36">Evangelical Congregational Church</option>
-            
-            <option value="37">Evangelical Covenant Church of America</option>
-            
-            <option value="38">Evangelical Free Church of America</option>
-            
-            <option value="39">Evangelical Lutheran Church</option>
-            
-            <option value="64">Free Methodist</option>
-            
-            <option value="41">Free Will Baptist Church</option>
-            
-            <option value="65">Friends</option>
-            
-            <option value="91">Greek Orthodox</option>
-            
-            <option value="42">Interdenominational</option>
-            
-            <option value="40">International United Pentecostal Church</option>
-            
-            <option value="80">Jewish</option>
-            
-            <option value="94">Latter Day Saints (Mormon Church)</option>
-            
-            <option value="68">Lutheran Church - Missouri Synod</option>
-            
-            <option value="67">Lutheran Church in America</option>
-            
-            <option value="43">Mennonite Brethren Church</option>
-            
-            <option value="69">Mennonite Church</option>
-            
-            <option value="87">Missionary Church Inc</option>
-            
-            <option value="44">Moravian Church</option>
-            
-            <option value="78">Multiple Protestant Denomination</option>
-            
-            <option value="45">North American Baptist</option>
-            
-            <option value="100">Original Free Will Baptist</option>
-            
-            <option value="79">Other Protestant</option>
-            
-            <option value="47">Pentecostal Holiness Church</option>
-            
-            <option value="103">Presbyterian</option>
-            
-            <option value="66">Presbyterian Church (USA)</option>
-            
-            <option value="73">Protestant Episcopal</option>
-            
-            <option value="77">Protestant, not specified</option>
-            
-            <option value="49">Reformed Church in America</option>
-            
-            <option value="81">Reformed Presbyterian Church</option>
-            
-            <option value="30">Roman Catholic</option>
-            
-            <option value="92">Russian Orthodox</option>
-            
-            <option value="95">Seventh Day Adventists</option>
-            
-            <option value="75">Southern Baptist</option>
-            
-            <option value="97">The Presbyterian Church in America</option>
-            
-            <option value="88">Undenominational</option>
-            
-            <option value="93">Unitarian Universalist</option>
-            
-            <option value="84">United Brethren Church</option>
-            
-            <option value="76">United Church of Christ</option>
-            
-            <option value="71">United Methodist</option>
-            
-            <option value="89">Wesleyan</option>
-            
-            <option value="33">Wisconsin Evangelical Lutheran Synod</option>
-            
-            <option value="99">Other (none of the above)</option>
+            <option value="SPECIALIZEDMISSIONS_TRIBAL">Tribal College and University</option>
+			
+			<option value="RELIGIOUSAFFLIATIONS">Religious Affiliations</option>
             
           </select>
         </label>
