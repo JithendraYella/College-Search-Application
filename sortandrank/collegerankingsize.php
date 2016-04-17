@@ -39,7 +39,7 @@
     <!-- Styles
     ================================================== -->
 
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
 
 
 
@@ -197,8 +197,7 @@
 
         <div>
 
-            <a target="_blank"><span class="ed-logo"></span> DBMS Project Group 22 -
-                Tarun,Siva,Jithendra,Pragna</a>
+            <a target="_blank"><span class="ed-logo"></span> DBMS Project Group 22 - Tarun,Siva,Jithendra,Pragna</a>
 
         </div>
 
@@ -236,189 +235,35 @@
     <div class="container show-loaded">
         <div class="results-sort u-group_inlineaa">
             <?php
-            $totalstringnamesort = 'collegelistingname.php?'.$_SERVER['QUERY_STRING'];
-            $totalstringgraduationrate = 'collegelistinggraduationrate.php?'.$_SERVER['QUERY_STRING'];
-            $totalstringsortsizeascending = 'collegelistingsizeasc.php?'.$_SERVER['QUERY_STRING'];
-            $totalstringcostofattendance = 'collegelistingcostofatt.php?'.$_SERVER['QUERY_STRING'];
-            $totalstringretentionrate = 'collegelistingnameretentionrate.php?'.$_SERVER['QUERY_STRING'];
+            $rankgraduationrate = 'collegerankinggraduationrate.php';
+            $ranksize = 'collegerankingsize.php';
+            $rankcostatt = 'collegerankingcostofatt.php';
+            $rankretentionrate = 'collegerankingretentionrate.php';
 
-            echo "<label for=\"select-sort\">SORT BY :</label>";
-            echo "<input class=\"sortbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$totalstringnamesort'\" value=\"Alphabetical Order\">";
-            echo "<input class=\"sortbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$totalstringgraduationrate'\" value=\"Graduation Rate\">";
-            echo "<input class=\"sortbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$totalstringsortsizeascending'\" value=\"Size(Ascending)\">";
-            echo "<input class=\"sortbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$totalstringcostofattendance'\" value=\"Cost of Attendance\">";
-            echo "<input class=\"sortbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$totalstringretentionrate'\" value=\"Retention Rate\">";
+            echo "<br/>";
+            echo "<br/>";
+            echo "<input class=\"rankbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$rankgraduationrate'\" value=\"Graduation Rate Ranking\">";
+            echo "<input class=\"rankbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$ranksize'\" value=\"College Size Ranking\">";
+            echo "<input class=\"rankbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$rankcostatt'\" value=\"Cost of Attendance Ranking\">";
+            echo "<input class=\"rankbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$rankretentionrate'\" value=\"Retention Rate Ranking\">";
             ?>
         </div>
+
+        <br/>
+        <br/>
+        <div class="rankstyling">
+            <p><h1>COLLEGE RANKINGS - SIZE OF INSTITUTION</h1></p>
+        </div>
+
         <div class="queryresult">
             <?php
-
             $conn = oci_connect("sainath", "siva123#", "oracle.cise.ufl.edu:1521/orcl");
 
             If (!$conn){
                 echo 'Failed to connect to Oracle';
-                }
+            }
             else {
-                echo '<br/>';
-                echo '<br/>';
-                echo "Input Parameters :";
-                echo '<br/>';
-				
-				$stid = oci_parse($conn, "DELETE FROM temp1");
-                oci_execute($stid);
-				$stid = oci_parse($conn, "DELETE FROM temp2");
-                oci_execute($stid);
-				
-				if (isset($_GET['major'])) {
-                    $prog = $_GET['major'];
-					if(strcmp($prog,'Any')==0){
-						//echo "Any selected<br />";
-						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM ACADEMICS1");
-						oci_execute($thisisit);
-					}
-					else{
-						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM ACADEMICS1 WHERE $prog > 0");
-						oci_execute($thisisit);
-					}
-                }
-				
-				if (isset($_GET['state'])) {
-                    $state = $_GET['state'];
-					$thisisit = oci_parse($conn, "INSERT INTO temp2 SELECT UNIID FROM COLLEGE1 WHERE state LIKE '%%' AND UNIID IN (SELECT UNIID FROM temp1)");
-					oci_execute($thisisit);
-					$stid = oci_parse($conn, "DELETE FROM temp1");
-					oci_execute($stid);
-                }
-				
-                if (isset($_GET['zip'])) {
-                    $zip = $_GET['zip'];
-					//echo "$zip";
-					if($zip > 0){
-						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM COLLEGE1 WHERE zip < $zip+100 AND zip > $zip-100 AND UNIID IN (SELECT UNIID FROM temp2)");
-						oci_execute($thisisit);
-					}
-					else{
-						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM COLLEGE1 WHERE UNIID IN (SELECT UNIID FROM temp2)");
-						oci_execute($thisisit);
-					}
-					$stid = oci_parse($conn, "DELETE FROM temp2");
-					oci_execute($stid);
-                }
-				
-				if (isset($_GET['serving'])) {
-                    $miss = $_GET['serving'];
-					if(strcmp($miss,'Any')==0){
-						//echo "Any selected<br />";
-						$thisisit = oci_parse($conn, "INSERT INTO temp2 SELECT UNIID FROM UNITYPE WHERE UNIID IN (SELECT UNIID FROM temp1)");
-						oci_execute($thisisit);
-					}
-					else{
-						$thisisit = oci_parse($conn, "INSERT INTO temp2 SELECT UNIID FROM UNITYPE WHERE $miss > 0 AND UNIID IN (SELECT UNIID FROM temp1)");
-						oci_execute($thisisit);
-					}
-					$stid = oci_parse($conn, "DELETE FROM temp1");
-					oci_execute($stid);
-                }
-
-                $size = array();
-                if (isset($_GET['size'])) {
-                    foreach($_GET['size'] as $sizevalue) {
-                        $size[] = $sizevalue;
-                    }
-                }
-
-                $control = array();
-                if (isset($_GET['control'])) {
-                    foreach($_GET['control'] as $controlvalue) {
-                        $control[] = $controlvalue;
-                    }
-                }
-				
-                /*if (isset($_GET['size'])) {
-                    $size = array();
-                    $entirestring = $_SERVER['QUERY_STRING'];
-
-                    if (strpos($entirestring, 'small') !== false && strpos($entirestring, 'medium') !== true && strpos($entirestring, 'large') !== true) {
-                        $size[0] = 'small';
-                    } elseif (strpos($entirestring, 'small') !== false && strpos($entirestring, 'medium') !== false && strpos($entirestring, 'large') !== true) {
-                        $size[0] = 'small';
-                        $size[1] = 'medium';
-                    } elseif (strpos($entirestring, 'small') !== false && strpos($entirestring, 'medium') !== false && strpos($entirestring, 'large') !== false) {
-                        $size[0] = 'small';
-                        $size[1] = 'medium';
-                        $size[2] = 'large';
-                    } elseif (strpos($entirestring, 'small') !== true && strpos($entirestring, 'medium') !== false && strpos($entirestring, 'large') !== true) {
-                        $size[0] = 'medium';
-                    } elseif (strpos($entirestring, 'small') !== true && strpos($entirestring, 'medium') !== false && strpos($entirestring, 'large') !== false) {
-                        $size[0] = 'medium';
-                        $size[1] = 'large';
-                    } elseif (strpos($entirestring, 'small') !== true && strpos($entirestring, 'medium') !== true && strpos($entirestring, 'large') !== false) {
-                        $size[0] = 'large';
-                    } elseif (strpos($entirestring, 'small') !== false && strpos($entirestring, 'medium') !== true && strpos($entirestring, 'large') !== false) {
-                        $size[0] = 'small';
-                        $size[1] = 'large';
-                    }
-                }*/
-
-                if (isset($_GET['religious'])) {
-                    $religious = $_GET['religious'];
-                }
-
-                //echo $name;
-
-                echo '<br/>';
-                echo '<br/>';
-                if (isset($_GET['name'])) {
-                echo $_GET['name'];
-                echo '<br/>';
-                }
-                if (isset($state)) {
-                echo $state;
-                echo '<br/>';
-                }
-                if (isset($zip)) {
-                echo $zip;
-                echo '<br/>';
-                }
-                if (isset($prog)) {
-                echo $prog;
-                echo '<br/>';
-                }
-                if (isset($miss)) {
-                echo $miss;
-                echo '<br/>';
-                }
-                if (isset($religious)) {
-                    echo $religious;
-                    echo '<br/>';
-                }
-                if (isset($size)){
-                    print_r(array_values($size));
-                    echo '<br/>';
-                }
-                if (isset($control)){
-                    print_r(array_values($control));
-                    echo '<br/>';
-                /*for ($y = 0; $y < count($control); $y++) {
-                    echo $control[$y];
-                    echo '<br/>';*/
-                }
-                echo '<br/>';
-                echo '<br/>';
-
-                echo "<div class=\"rankstyling\">";
-                echo "<p><h1>RESULTS</h1></p>";
-                echo "</div>";
-
-				if (isset($_GET['name'])) {
-                    $name = $_GET['name'];
-					$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM COLLEGE1 WHERE name LIKE '%$name%' AND UNIID IN (SELECT UNIID FROM temp2)");
-					oci_execute($thisisit);
-					$stid = oci_parse($conn, "DELETE FROM temp2");
-					oci_execute($stid);
-                }
-				
-                $stid = oci_parse($conn, "SELECT * FROM COLLEGE1 WHERE UNIID IN (SELECT UNIID FROM temp1)");
+                $stid = oci_parse($conn, "SELECT * FROM COLLEGE1 ORDER BY NAME");
                 oci_execute($stid);
 
                 echo "<br>";
@@ -428,35 +273,17 @@
                 echo "<th style=\"width: 100px;\">S No.</th>";
                 echo "<th style=\"width: 600px;\">College Name</th>";
                 echo "</tr>\n";
-                /*$ncols = oci_num_fields($stid);
-                for ($i = 1; $i <= $ncols; $i++) {
-                    $column_name  = oci_field_name($stid, $i);
-
-                    echo "<tr>";
-                    echo "<td>$i</td>";
-                    echo "<td>$column_name</td>";
-                    echo "</tr>\n";
-                }*/
-
                 $count = 0;
                 while (($row = oci_fetch_object($stid)) != false) {
                     $universityID = htmlentities($row->UNIID, ENT_QUOTES, "UTF-8");
                     $universityName = htmlentities($row->NAME, ENT_QUOTES, "UTF-8");
                     echo "<tr>\n";
                     echo "<td>".(++$count)."</td>";
-                    echo "<td><a href=\"collegedetails.php?id=$universityID\">".$universityName."</a></td>";
-
-                    /*foreach ($row as $item) {
-                        $count++;
-                        echo "<td>$count</td>";
-                        echo "<td><a href=\"collegedetails.php?id='.($item[0]).'\">" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</a></td>\n";
-                    }*/
+                    echo "<td><a href=\"../collegedetails.php?id=$universityID\">".$universityName."</a></td>";
                     echo "</tr>\n";
                 }
-
                 echo "</table>\n";
             }
-
 
             oci_close($conn);
             ?>
@@ -473,8 +300,12 @@
 </main>
 
 
+
+
+
 <script src="js/picc-analytics.js"></script>
 <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js"></script>
+
 
 
 </body></html>

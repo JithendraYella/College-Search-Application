@@ -196,7 +196,7 @@
 
     <div>
 
-      <a target="_blank" href="https://www.ed.gov/"><span class="ed-logo"></span> DBMS Project Group 22 - Tarun,Siva,Jithendra,Pragna</a>
+      <a target="_blank"><span class="ed-logo"></span> DBMS Project Group 22 - Tarun,Siva,Jithendra,Pragna</a>
 
     </div>
 
@@ -206,7 +206,7 @@
 
     <div>
 
-      <h1><a href="/">College Search Application</a></h1>
+      <h1><a href="/College-Search-Application/index.php">College Search Application</a></h1>
 
       <nav>
         <ul>
@@ -601,8 +601,15 @@
 
   </div>
 
-
   </form>
+
+  <div class="container search_form-submit">
+
+    <button class="button button-primary search-button" id="rank-submit" type=button onClick="location.href='/College-Search-Application/collegeranking.php'">
+      COLLEGE RANKINGS
+    </button>
+
+  </div>
 
 </section>
   </section>
