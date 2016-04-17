@@ -23,10 +23,21 @@ blockquote, q {
 blockquote::before, blockquote::after, q::before, q::after {
     content: none;
 }
+
+table, td, th {    
+    border: 1px solid black;
+    text-align: left;
+}
+
 table {
     border-collapse: collapse;
-    border-spacing: 0;
+    width: 100%;
 }
+
+th, td {
+    padding: 15px;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -560,6 +571,13 @@ label.required::after, form .label.required::after {
 label abbr, form .label abbr {
     display: none;
 }
+
+.detailslabel{
+	font-size: 2rem;
+	font-family: Montserrat,"Helvetica Neue",Helvetica,arial,sans-serif;
+    font-weight: 600;
+}
+
 textarea, input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], textarea, select[multiple="multiple"] {
     background-color: white;
     border: 1px solid #e1e1e1;
@@ -5034,4 +5052,29 @@ body {
 }
 .fa-medium::before {
     content: "?";
+}
+
+
+.sortbutton {
+    display: inline-block;
+    width: 20%;
+    height: 60px;
+    background-color: #45A1BF;
+    text-shadow: 0 -1px rgba(0, 0, 0,0.25);
+    text-align: center;
+    padding-right: 7px;
+}
+
+.rankbutton {
+    display: inline-block;
+    width: 25%;
+    height: 60px;
+    background-color: #45A1BF;
+    text-shadow: 0 -1px rgba(0, 0, 0,0.25);
+    text-align: center;
+    padding-right: 7px;
+}
+
+.rankstyling {
+    text-align: center;
 }

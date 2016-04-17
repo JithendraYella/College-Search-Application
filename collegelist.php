@@ -197,7 +197,7 @@
 
         <div>
 
-            <a target="_blank" href="https://www.ed.gov/"><span class="ed-logo"></span> DBMS Project Group 22 -
+            <a target="_blank"><span class="ed-logo"></span> DBMS Project Group 22 -
                 Tarun,Siva,Jithendra,Pragna</a>
 
         </div>
@@ -208,7 +208,7 @@
 
         <div>
 
-            <h1><a href="/">College Search Application</a></h1>
+            <h1><a href="/College-Search-Application/index.php">College Search Application</a></h1>
 
             <nav>
                 <ul>
@@ -234,31 +234,25 @@
 <main>
     <!-- background image -->
     <div class="container show-loaded">
-        <div class="results-sort u-group_inline">
-            <div class="u-group_inline-left">
-                <label for="select-sort">Sort:</label>
-            </div>
+        <div class="results-sort u-group_inlineaa">
             <?php
-            $totalstring = 'collegelisting.php?'.$_SERVER['QUERY_STRING'];
+            $totalstringnamesort = 'collegelistingname.php?'.$_SERVER['QUERY_STRING'];
+            $totalstringgraduationrate = 'collegelistinggraduationrate.php?'.$_SERVER['QUERY_STRING'];
+            $totalstringsortsizeascending = 'collegelistingsizeasc.php?'.$_SERVER['QUERY_STRING'];
+            $totalstringcostofattendance = 'collegelistingcostofatt.php?'.$_SERVER['QUERY_STRING'];
+            $totalstringretentionrate = 'collegelistingnameretentionrate.php?'.$_SERVER['QUERY_STRING'];
+
+            echo "<label for=\"select-sort\">SORT BY :</label>";
+            echo "<input class=\"sortbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$totalstringnamesort'\" value=\"Alphabetical Order\">";
+            echo "<input class=\"sortbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$totalstringgraduationrate'\" value=\"Graduation Rate\">";
+            echo "<input class=\"sortbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$totalstringsortsizeascending'\" value=\"Size(Ascending)\">";
+            echo "<input class=\"sortbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$totalstringcostofattendance'\" value=\"Cost of Attendance\">";
+            echo "<input class=\"sortbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$totalstringretentionrate'\" value=\"Retention Rate\">";
             ?>
-            <div class="u-group_inline-right">
-                <form action="<?php echo $totalstring ?>" method='GET'>
-                    <select id="select-sort" name="sort">
-                        <option value="name:asc" selected="">Name (A to Z)</option>
-                        <option value="advantage:desc">% Earning Above HS Grad</option>
-                        <option value="avg_net_price:asc">Average Annual Cost</option>
-                        <option value="completion_rate:desc">Graduation Rate</option>
-                        <option value="salary:desc">Salary After Attending</option>
-                        <option value="size:asc">Size (Small to Large)</option>
-                    </select>
-                    <button class="button button-primary search-button" id="search-submit" type="submit">
-                        Submit
-                    </button>
-                </form>
-            </div>
         </div>
         <div class="queryresult">
             <?php
+
             $conn = oci_connect("sainath", "siva123#", "oracle.cise.ufl.edu:1521/orcl");
 
             If (!$conn){
@@ -269,21 +263,78 @@
                 echo '<br/>';
                 echo "Input Parameters :";
                 echo '<br/>';
-
-                if (isset($_GET['name'])) {
-                    $name = $_GET['name'];
+				
+				$stid = oci_parse($conn, "DELETE FROM temp1");
+                oci_execute($stid);
+				$stid = oci_parse($conn, "DELETE FROM temp2");
+                oci_execute($stid);
+				
+				if (isset($_GET['major'])) {
+                    $prog = $_GET['major'];
+					if(strcmp($prog,'Any')==0){
+						//echo "Any selected<br />";
+						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM ACADEMICS1");
+						oci_execute($thisisit);
+					}
+					else{
+						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM ACADEMICS1 WHERE $prog > 0");
+						oci_execute($thisisit);
+					}
                 }
-
+				
+				if (isset($_GET['state'])) {
+                    $state = $_GET['state'];
+					$thisisit = oci_parse($conn, "INSERT INTO temp2 SELECT UNIID FROM COLLEGE1 WHERE state LIKE '%%' AND UNIID IN (SELECT UNIID FROM temp1)");
+					oci_execute($thisisit);
+					$stid = oci_parse($conn, "DELETE FROM temp1");
+					oci_execute($stid);
+                }
+				
                 if (isset($_GET['zip'])) {
                     $zip = $_GET['zip'];
+					//echo "$zip";
+					if($zip > 0){
+						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM COLLEGE1 WHERE zip < $zip+100 AND zip > $zip-100 AND UNIID IN (SELECT UNIID FROM temp2)");
+						oci_execute($thisisit);
+					}
+					else{
+						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM COLLEGE1 WHERE UNIID IN (SELECT UNIID FROM temp2)");
+						oci_execute($thisisit);
+					}
+					$stid = oci_parse($conn, "DELETE FROM temp2");
+					oci_execute($stid);
+                }
+				
+				if (isset($_GET['serving'])) {
+                    $miss = $_GET['serving'];
+					if(strcmp($miss,'Any')==0){
+						//echo "Any selected<br />";
+						$thisisit = oci_parse($conn, "INSERT INTO temp2 SELECT UNIID FROM UNITYPE WHERE UNIID IN (SELECT UNIID FROM temp1)");
+						oci_execute($thisisit);
+					}
+					else{
+						$thisisit = oci_parse($conn, "INSERT INTO temp2 SELECT UNIID FROM UNITYPE WHERE $miss > 0 AND UNIID IN (SELECT UNIID FROM temp1)");
+						oci_execute($thisisit);
+					}
+					$stid = oci_parse($conn, "DELETE FROM temp1");
+					oci_execute($stid);
                 }
 
-                if (isset($_GET['major'])) {
-                    $major = $_GET['major'];
-                }
-
-
+                $size = array();
                 if (isset($_GET['size'])) {
+                    foreach($_GET['size'] as $sizevalue) {
+                        $size[] = $sizevalue;
+                    }
+                }
+
+                $control = array();
+                if (isset($_GET['control'])) {
+                    foreach($_GET['control'] as $controlvalue) {
+                        $control[] = $controlvalue;
+                    }
+                }
+				
+                /*if (isset($_GET['size'])) {
                     $size = array();
                     $entirestring = $_SERVER['QUERY_STRING'];
 
@@ -307,78 +358,69 @@
                         $size[0] = 'small';
                         $size[1] = 'large';
                     }
-                }
-
-
-                if (isset($_GET['control'])) {
-                    $control = array();
-                    $entirestring = $_SERVER['QUERY_STRING'];
-
-                    if (strpos($entirestring, 'public') !== false && strpos($entirestring, 'private') !== true && strpos($entirestring, 'profit') !== true) {
-                        $control[0] = 'public';
-                    } elseif (strpos($entirestring, 'public') !== false && strpos($entirestring, 'private') !== false && strpos($entirestring, 'profit') !== true) {
-                        $control[0] = 'public';
-                        $control[1] = 'private';
-                    } elseif (strpos($entirestring, 'public') !== false && strpos($entirestring, 'private') !== false && strpos($entirestring, 'profit') !== false) {
-                        $control[0] = 'public';
-                        $control[1] = 'private';
-                        $control[2] = 'profit';
-                    } elseif (strpos($entirestring, 'public') !== true && strpos($entirestring, 'private') !== false && strpos($entirestring, 'profit') !== true) {
-                        $control[0] = 'private';
-                    } elseif (strpos($entirestring, 'public') !== true && strpos($entirestring, 'private') !== false && strpos($entirestring, 'profit') !== false) {
-                        $control[0] = 'private';
-                        $control[1] = 'profit';
-                    } elseif (strpos($entirestring, 'public') !== true && strpos($entirestring, 'private') !== true && strpos($entirestring, 'profit') !== false) {
-                        $control[0] = 'profit';
-                    } elseif (strpos($entirestring, 'public') !== false && strpos($entirestring, 'private') !== true && strpos($entirestring, 'profit') !== false) {
-                        $control[0] = 'public';
-                        $control[1] = 'profit';
-                    }
-
-                }
-
-                /*if (isset($_GET['control'])) {
-                    $controlarray = array();
-                    foreach ($_GET['control'] as $ctrl) {
-
-                    }
                 }*/
-
-                if (isset($_GET['serving'])) {
-                    $serving = $_GET['serving'];
-                }
 
                 if (isset($_GET['religious'])) {
                     $religious = $_GET['religious'];
                 }
 
+                //echo $name;
+
                 echo '<br/>';
-                echo $name;
                 echo '<br/>';
+                if (isset($_GET['name'])) {
+                echo $_GET['name'];
+                echo '<br/>';
+                }
+                if (isset($state)) {
+                echo $state;
+                echo '<br/>';
+                }
+                if (isset($zip)) {
                 echo $zip;
                 echo '<br/>';
-                echo $major;
+                }
+                if (isset($prog)) {
+                echo $prog;
                 echo '<br/>';
-                echo $serving;
+                }
+                if (isset($miss)) {
+                echo $miss;
                 echo '<br/>';
-                echo $religious;
-                echo '<br/>';
+                }
+                if (isset($religious)) {
+                    echo $religious;
+                    echo '<br/>';
+                }
                 if (isset($size)){
-                for ($x = 0; $x < count($size); $x++) {
-                    echo $size[$x];
+                    print_r(array_values($size));
                     echo '<br/>';
-                }}
+                }
                 if (isset($control)){
-                for ($y = 0; $y < count($control); $y++) {
-                    echo $control[$y];
+                    print_r(array_values($control));
                     echo '<br/>';
-                }}
+                /*for ($y = 0; $y < count($control); $y++) {
+                    echo $control[$y];
+                    echo '<br/>';*/
+                }
+                echo '<br/>';
+                echo '<br/>';
 
+                echo "<div class=\"rankstyling\">";
+                echo "<p><h1>RESULTS</h1></p>";
+                echo "</div>";
 
-                $stid = oci_parse($conn, 'SELECT * FROM COLLEGE1');
+				if (isset($_GET['name'])) {
+                    $name = $_GET['name'];
+					$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM COLLEGE1 WHERE name LIKE '%$name%' AND UNIID IN (SELECT UNIID FROM temp2)");
+					oci_execute($thisisit);
+					$stid = oci_parse($conn, "DELETE FROM temp2");
+					oci_execute($stid);
+                }
+				
+                $stid = oci_parse($conn, "SELECT * FROM COLLEGE1 WHERE UNIID IN (SELECT UNIID FROM temp1)");
                 oci_execute($stid);
 
-                echo "<p><h2>Results:</h2></p> ";
                 echo "<br>";
                 echo "<br>";
                 echo "<table border=\"2\" cellpadding=\"5\" cellspacing=\"2\" style=\"text-align: center;\">";

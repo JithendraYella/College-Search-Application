@@ -196,7 +196,7 @@
 
     <div>
 
-      <a target="_blank" href="https://www.ed.gov/"><span class="ed-logo"></span> DBMS Project Group 22 - Tarun,Siva,Jithendra,Pragna</a>
+      <a target="_blank"><span class="ed-logo"></span> DBMS Project Group 22 - Tarun,Siva,Jithendra,Pragna</a>
 
     </div>
 
@@ -206,7 +206,7 @@
 
     <div>
 
-      <h1><a href="/">College Search Application</a></h1>
+      <h1><a href="/College-Search-Application/index.php">College Search Application</a></h1>
 
       <nav>
         <ul>
@@ -265,83 +265,29 @@
 
         <label for="major">Choose a program
           <select name="major" id="major">
-            <option selected="" value="">Any</option>
+            <option selected="" value="Any">Any</option>
             
-            <option value="agriculture">Agriculture, Agriculture Operations, and Related Sciences</option>
+            <option value="AGRICULTURE_PROGRAMS">Agriculture Programs</option>
             
-            <option value="architecture">Architecture and Related Services</option>
+            <option value="ENGINEERING_PROGRAMS">Engineering Programs</option>
             
-            <option value="ethnic_cultural_gender">Area, Ethnic, Cultural, Gender, and Group Studies</option>
+            <option value="CS_IS_PROGRAMS">Computer Science and Information Systems Programs</option>
             
-            <option value="biological">Biological and Biomedical Sciences</option>
+            <option value="ARTS_PROGRAMS">Arts Programs</option>
             
-            <option value="business_marketing">Business, Management, Marketing, and Related Support Services</option>
+            <option value="FOREIGNLANGUAGE_PROGRAMS">Foreign Language Programs</option>
             
-            <option value="communication">Communication, Journalism, and Related Programs</option>
+            <option value="PSYCHOLOGY_PROGRAMS">Psychology Programs</option>
             
-            <option value="communications_technology">Communications Technologies/Technicians and Support Services</option>
+            <option value="LAW_PROGRAMS">Law Programs</option>
             
-            <option value="computer">Computer and Information Sciences and Support Services</option>
+            <option value="HEALTH_PROGRAMS">Health Programs</option>
             
-            <option value="construction">Construction Trades</option>
+            <option value="SOCIALSCIENCES_PROGRAMS">Social Sciences Programs</option>
             
-            <option value="education">Education</option>
+            <option value="BUSINESSANDMANAGEMENT_PROGRAMS">Business and Management Programs</option>
             
-            <option value="engineering">Engineering</option>
-            
-            <option value="engineering_technology">Engineering Technologies and Engineering-Related Fields</option>
-            
-            <option value="english">English Language and Literature/Letters</option>
-            
-            <option value="family_consumer_science">Family and Consumer Sciences/Human Sciences</option>
-            
-            <option value="language">Foreign Languages, Literatures, and Linguistics</option>
-            
-            <option value="health">Health Professions and Related Programs</option>
-            
-            <option value="history">History</option>
-            
-            <option value="security_law_enforcement">Homeland Security, Law Enforcement, Firefighting and Related Protective Services</option>
-            
-            <option value="legal">Legal Professions and Studies</option>
-            
-            <option value="humanities">Liberal Arts and Sciences, General Studies and Humanities</option>
-            
-            <option value="library">Library Science</option>
-            
-            <option value="mathematics">Mathematics and Statistics</option>
-            
-            <option value="mechanic_repair_technology">Mechanic and Repair Technologies/Technicians</option>
-            
-            <option value="military">Military Technologies and Applied Sciences</option>
-            
-            <option value="multidiscipline">Multi/Interdisciplinary Studies</option>
-            
-            <option value="resources">Natural Resources and Conservation</option>
-            
-            <option value="parks_recreation_fitness">Parks, Recreation, Leisure, and Fitness Studies</option>
-            
-            <option value="personal_culinary">Personal and Culinary Services</option>
-            
-            <option value="philosophy_religious">Philosophy and Religious Studies</option>
-            
-            <option value="physical_science">Physical Sciences</option>
-            
-            <option value="precision_production">Precision Production</option>
-            
-            <option value="psychology">Psychology</option>
-            
-            <option value="public_administration_social_service">Public Administration and Social Service Professions</option>
-            
-            <option value="science_technology">Science Technologies/Technicians</option>
-            
-            <option value="social_science">Social Sciences</option>
-            
-            <option value="theology_religious_vocation">Theology and Religious Vocations</option>
-            
-            <option value="transportation">Transportation and Materials Moving</option>
-            
-            <option value="visual_performing">Visual and Performing Arts</option>
+            <option value="INTERANDOTHER_PROGRAMS">Interdisciplinary and other Programs</option>
             
           </select>
         </label>
@@ -355,289 +301,152 @@
   </fieldset>
 
   <fieldset>
-    <legend>Location</legend>
+      <legend>Location</legend>
 
-    <aria-accordion class="container" id="school-location" aria-expanded="true">
+      <aria-accordion class="container" id="school-location" aria-expanded="true">
 
-      <h1 class="search_category">
-        <button aria-controls="location-content" aria-expanded="true" type="button" tabindex="0">
-          Location
-        </button>
-      </h1>
+        <h1 class="search_category">
+          <button aria-controls="location-content" aria-expanded="true" type="button" tabindex="0">
+            Location
+          </button>
+        </h1>
 
-      <div class="accordion-div" aria-hidden="false" id="location-content">
+        <div class="accordion-div" aria-hidden="false" id="location-content">
+          <div class="input-add group_inline">
 
-        <div class="input-add group_inline">
-
-          <div id="label-select-state" class="label">
-            Select a state
+            <div id="label-select-state" class="label"></div>
           </div>
 
-          <multi-select><select name="state" class="select-state" aria-labelledby="label-select-state" multiple="multiple" style="display: none;" aria-hidden="true">
-                
-                
-                <option value="AL">Alabama</option>
-                
-                <option value="AK">Alaska</option>
-                
-                <option value="AS">American Samoa</option>
-                
-                <option value="AZ">Arizona</option>
-                
-                <option value="AR">Arkansas</option>
-                
-                <option value="CA">California</option>
-                
-                <option value="CO">Colorado</option>
-                
-                <option value="CT">Connecticut</option>
-                
-                <option value="DE">Delaware</option>
-                
-                <option value="DC">District of Columbia</option>
-                
-                <option value="FL">Florida</option>
-                
-                <option value="GA">Georgia</option>
-                
-                <option value="GU">Guam</option>
-                
-                <option value="HI">Hawaii</option>
-                
-                <option value="ID">Idaho</option>
-                
-                <option value="IL">Illinois</option>
-                
-                <option value="IN">Indiana</option>
-                
-                <option value="IA">Iowa</option>
-                
-                <option value="KS">Kansas</option>
-                
-                <option value="KY">Kentucky</option>
-                
-                <option value="LA">Louisiana</option>
-                
-                <option value="ME">Maine</option>
-                
-                <option value="MD">Maryland</option>
-                
-                <option value="MA">Massachusetts</option>
-                
-                <option value="MI">Michigan</option>
-                
-                <option value="MN">Minnesota</option>
-                
-                <option value="MS">Mississippi</option>
-                
-                <option value="MO">Missouri</option>
-                
-                <option value="MT">Montana</option>
-                
-                <option value="NE">Nebraska</option>
-                
-                <option value="NV">Nevada</option>
-                
-                <option value="NH">New Hampshire</option>
-                
-                <option value="NJ">New Jersey</option>
-                
-                <option value="NM">New Mexico</option>
-                
-                <option value="NY">New York</option>
-                
-                <option value="NC">North Carolina</option>
-                
-                <option value="ND">North Dakota</option>
-                
-                <option value="OH">Ohio</option>
-                
-                <option value="OK">Oklahoma</option>
-                
-                <option value="OR">Oregon</option>
-                
-                <option value="PA">Pennsylvania</option>
-                
-                <option value="PR">Puerto Rico</option>
-                
-                <option value="RI">Rhode Island</option>
-                
-                <option value="SC">South Carolina</option>
-                
-                <option value="SD">South Dakota</option>
-                
-                <option value="TN">Tennessee</option>
-                
-                <option value="TX">Texas</option>
-                
-                <option value="UT">Utah</option>
-                
-                <option value="VT">Vermont</option>
-                
-                <option value="VI">Virgin Islands</option>
-                
-                <option value="VA">Virginia</option>
-                
-                <option value="WA">Washington</option>
-                
-                <option value="WV">West Virginia</option>
-                
-                <option value="WI">Wisconsin</option>
-                
-                <option value="WY">Wyoming</option>
-                
-              </select><div class="multi-select_item">
-            <div class="u-group_inline u-group_inline-left">
-              <select name="" class="select-state" aria-labelledby="label-select-state">
-                <option selected="" value="">Any</option>
-                
-                <option value="AL">Alabama</option>
-                
-                <option value="AK">Alaska</option>
-                
-                <option value="AS">American Samoa</option>
-                
-                <option value="AZ">Arizona</option>
-                
-                <option value="AR">Arkansas</option>
-                
-                <option value="CA">California</option>
-                
-                <option value="CO">Colorado</option>
-                
-                <option value="CT">Connecticut</option>
-                
-                <option value="DE">Delaware</option>
-                
-                <option value="DC">District of Columbia</option>
-                
-                <option value="FL">Florida</option>
-                
-                <option value="GA">Georgia</option>
-                
-                <option value="GU">Guam</option>
-                
-                <option value="HI">Hawaii</option>
-                
-                <option value="ID">Idaho</option>
-                
-                <option value="IL">Illinois</option>
-                
-                <option value="IN">Indiana</option>
-                
-                <option value="IA">Iowa</option>
-                
-                <option value="KS">Kansas</option>
-                
-                <option value="KY">Kentucky</option>
-                
-                <option value="LA">Louisiana</option>
-                
-                <option value="ME">Maine</option>
-                
-                <option value="MD">Maryland</option>
-                
-                <option value="MA">Massachusetts</option>
-                
-                <option value="MI">Michigan</option>
-                
-                <option value="MN">Minnesota</option>
-                
-                <option value="MS">Mississippi</option>
-                
-                <option value="MO">Missouri</option>
-                
-                <option value="MT">Montana</option>
-                
-                <option value="NE">Nebraska</option>
-                
-                <option value="NV">Nevada</option>
-                
-                <option value="NH">New Hampshire</option>
-                
-                <option value="NJ">New Jersey</option>
-                
-                <option value="NM">New Mexico</option>
-                
-                <option value="NY">New York</option>
-                
-                <option value="NC">North Carolina</option>
-                
-                <option value="ND">North Dakota</option>
-                
-                <option value="OH">Ohio</option>
-                
-                <option value="OK">Oklahoma</option>
-                
-                <option value="OR">Oregon</option>
-                
-                <option value="PA">Pennsylvania</option>
-                
-                <option value="PR">Puerto Rico</option>
-                
-                <option value="RI">Rhode Island</option>
-                
-                <option value="SC">South Carolina</option>
-                
-                <option value="SD">South Dakota</option>
-                
-                <option value="TN">Tennessee</option>
-                
-                <option value="TX">Texas</option>
-                
-                <option value="UT">Utah</option>
-                
-                <option value="VT">Vermont</option>
-                
-                <option value="VI">Virgin Islands</option>
-                
-                <option value="VA">Virginia</option>
-                
-                <option value="WA">Washington</option>
-                
-                <option value="WV">West Virginia</option>
-                
-                <option value="WI">Wisconsin</option>
-                
-                <option value="WY">Wyoming</option>
-                
-              </select>
-            </div>
-            <div class="u-group_inline u-group_inline-right u-nowrap">
-              <!--<button class="button button-add" type="button">
-                Add<br>State
-              </button> -->
-			  
-              <button title="Remove State" class="button button-remove" type="button">
-                <i class="fa fa-times-circle"></i>
-              </button>
-            </div>
-          </div></multi-select>
+          <label for="state">Select a State
+            <select name="state" id="state" class="select-state" aria-labelledby="label-select-state" aria-hidden="false">
+              <option selected="" value="">Any</option>
 
-        </div>
+              <option value="AL">Alabama</option>
 
-    
-        <div class="group_inline">
+              <option value="AK">Alaska</option>
 
-          <label class="group_inline-left" for="zip-code">Enter a ZIP code
-            <input type="number" autocapitalize="off" autocorrect="off" autocomplete="off" placeholder="e.g., 45400" name="zip" id="zip-code">
+              <option value="AS">American Samoa</option>
+
+              <option value="AZ">Arizona</option>
+
+              <option value="AR">Arkansas</option>
+
+              <option value="CA">California</option>
+
+              <option value="CO">Colorado</option>
+
+              <option value="CT">Connecticut</option>
+
+              <option value="DE">Delaware</option>
+
+              <option value="DC">District of Columbia</option>
+
+              <option value="FL">Florida</option>
+
+              <option value="GA">Georgia</option>
+
+              <option value="GU">Guam</option>
+
+              <option value="HI">Hawaii</option>
+
+              <option value="ID">Idaho</option>
+
+              <option value="IL">Illinois</option>
+
+              <option value="IN">Indiana</option>
+
+              <option value="IA">Iowa</option>
+
+              <option value="KS">Kansas</option>
+
+              <option value="KY">Kentucky</option>
+
+              <option value="LA">Louisiana</option>
+
+              <option value="ME">Maine</option>
+
+              <option value="MD">Maryland</option>
+
+              <option value="MA">Massachusetts</option>
+
+              <option value="MI">Michigan</option>
+
+              <option value="MN">Minnesota</option>
+
+              <option value="MS">Mississippi</option>
+
+              <option value="MO">Missouri</option>
+
+              <option value="MT">Montana</option>
+
+              <option value="NE">Nebraska</option>
+
+              <option value="NV">Nevada</option>
+
+              <option value="NH">New Hampshire</option>
+
+              <option value="NJ">New Jersey</option>
+
+              <option value="NM">New Mexico</option>
+
+              <option value="NY">New York</option>
+
+              <option value="NC">North Carolina</option>
+
+              <option value="ND">North Dakota</option>
+
+              <option value="OH">Ohio</option>
+
+              <option value="OK">Oklahoma</option>
+
+              <option value="OR">Oregon</option>
+
+              <option value="PA">Pennsylvania</option>
+
+              <option value="PR">Puerto Rico</option>
+
+              <option value="RI">Rhode Island</option>
+
+              <option value="SC">South Carolina</option>
+
+              <option value="SD">South Dakota</option>
+
+              <option value="TN">Tennessee</option>
+
+              <option value="TX">Texas</option>
+
+              <option value="UT">Utah</option>
+
+              <option value="VT">Vermont</option>
+
+              <option value="VI">Virgin Islands</option>
+
+              <option value="VA">Virginia</option>
+
+              <option value="WA">Washington</option>
+
+              <option value="WV">West Virginia</option>
+
+              <option value="WI">Wisconsin</option>
+
+              <option value="WY">Wyoming</option>
+
+            </select>
           </label>
+
+          <div class="group_inline">
+
+            <label class="group_inline-left" for="zip-code">Enter a ZIP code
+              <input type="number" autocapitalize="off" autocorrect="off" autocomplete="off" placeholder="e.g., 45400" name="zip" id="zip-code">
+            </label>
+          </div>
+
         </div>
+        <input type="submit" tabindex="-1" class="sr-only" value="Submit">
 
-        <!--
-        <label for="online" class="checkbox">
-          <input id="online" type="checkbox" name="online" checked value="1" tabindex="0">
-          <span tabindex="-1" class="checkbox-focus"></span>Include Online-Only Schools
-        </label>
-        -->
+      </aria-accordion>
 
-      </div>
-
-      <input type="submit" tabindex="-1" class="sr-only" value="Submit">
-
-    </aria-accordion>
-
-  </fieldset>
+    </fieldset>
 
   <fieldset>
     <legend>Size</legend>
@@ -659,19 +468,19 @@
           <ul>
             <li>
               <label class="checkbox" for="size-small">
-                <input type="checkbox" tabindex="0" value="small" name="size" id="size-small">
+                <input type="checkbox" tabindex="0" value="small" name="size[]" id="size-small">
                 <span class="checkbox-focus" tabindex="-1"></span>Small (&lt; 2,000)
               </label>
             </li>
             <li>
               <label class="checkbox" for="size-medium">
-                <input type="checkbox" tabindex="0" value="medium" name="size" id="size-medium">
+                <input type="checkbox" tabindex="0" value="medium" name="size[]" id="size-medium">
                 <span class="checkbox-focus" tabindex="-1"></span>Medium (2,000&ndash;15,000)
               </label>
             </li>
             <li>
               <label class="checkbox" for="size-large">
-                <input type="checkbox" tabindex="0" value="large" name="size" id="size-large">
+                <input type="checkbox" tabindex="0" value="large" name="size[]" id="size-large">
                 <span class="checkbox-focus" tabindex="-1"></span>Large (&gt; 15,000)
               </label>
             </li>
@@ -729,19 +538,19 @@
           <ul>
             <li>
               <label class="checkbox" for="type-public">
-                <input type="checkbox" tabindex="0" value="public" name="control" id="type-public">
+                <input type="checkbox" tabindex="0" value="public" name="control[]" id="type-public">
                 <span class="checkbox-focus" tabindex="-1"></span>Public
               </label>
             </li>
             <li>
               <label class="checkbox" for="type-private">
-                <input type="checkbox" tabindex="0" value="private" name="control" id="type-private">
+                <input type="checkbox" tabindex="0" value="private" name="control[]" id="type-private">
                 <span class="checkbox-focus" tabindex="-1"></span>Private Nonprofit
               </label>
             </li>
             <li>
               <label class="checkbox" for="type-profit">
-                <input type="checkbox" tabindex="0" value="profit" name="control" id="type-profit">
+                <input type="checkbox" tabindex="0" value="profit" name="control[]" id="type-profit">
                 <span class="checkbox-focus" tabindex="-1"></span>Private For-Profit
               </label>
             </li>
@@ -751,158 +560,27 @@
 
         <label for="special">Specialized mission
           <select name="serving" id="special">
-            <option selected="" value="">Any</option>
+            <option selected="" value="Any">Any</option>
             
-            <option value="women_only">Women-Only</option>
+            <option value="SPECIALIZEDMISSIONS_WOMENONLY">Women-Only</option>
             
-            <option value="men_only">Men-Only</option>
+            <option value="SPECIALIZEDMISSIONS_MENONLY">Men-Only</option>
             
-            <option value="aanipi">Asian American and Native American Pacific Islander-Serving Institution</option>
+            <option value="SPECIALIZEDMISSIONS_AANAPII">Asian American and Native American Pacific Islander-Serving Institution</option>
             
-            <option value="annh">Alaska Native and Native Hawaiian-Serving Institution</option>
+            <option value="SPECIALIZEDMISSIONS_ANNHI">Alaska Native and Native Hawaiian-Serving Institution</option>
             
-            <option value="hispanic">Hispanic-Serving Institution</option>
+            <option value="SPECIALIZEDMISSIONS_HSI">Hispanic-Serving Institution</option>
             
-            <option value="historically_black">Historically Black College and University</option>
+            <option value="SPECIALIZEDMISSIONS_HBCU">Historically Black College and University</option>
             
-            <option value="nant">Native American Non-Tribal Institution</option>
+            <option value="SPECIALIZEDMISSIONS_NANTI">Native American Non-Tribal Institution</option>
             
-            <option value="predominantly_black">Predominantly Black Institution</option>
+            <option value="SPECIALIZEDMISSIONS_PBI">Predominantly Black Institution</option>
             
-            <option value="tribal">Tribal College and University</option>
-            
-          </select>
-        </label>
-
-        <label for="affiliation">Religious affiliation
-          <select name="religious" id="affiliation">
-            <option selected="" value="">Any</option>
-            
-            <option value="51">African Methodist Episcopal</option>
-            
-            <option value="24">African Methodist Episcopal Zion Church</option>
-            
-            <option value="52">American Baptist</option>
-            
-            <option value="22">American Evangelical Lutheran Church</option>
-            
-            <option value="53">American Lutheran</option>
-            
-            <option value="27">Assemblies of God Church</option>
-            
-            <option value="54">Baptist</option>
-            
-            <option value="28">Brethren Church</option>
-            
-            <option value="34">Christ and Missionary Alliance Church</option>
-            
-            <option value="61">Christian Church (Disciples of Christ)</option>
-            
-            <option value="48">Christian Churches and Churches of Christ</option>
-            
-            <option value="55">Christian Methodist Episcopal</option>
-            
-            <option value="35">Christian Reformed Church</option>
-            
-            <option value="58">Church of Brethren</option>
-            
-            <option value="57">Church of God</option>
-            
-            <option value="59">Church of the Nazarene</option>
-            
-            <option value="74">Churches of Christ</option>
-            
-            <option value="60">Cumberland Presbyterian</option>
-            
-            <option value="101">Ecumenical Christian</option>
-            
-            <option value="50">Episcopal Church, Reformed</option>
-            
-            <option value="102">Evangelical Christian</option>
-            
-            <option value="36">Evangelical Congregational Church</option>
-            
-            <option value="37">Evangelical Covenant Church of America</option>
-            
-            <option value="38">Evangelical Free Church of America</option>
-            
-            <option value="39">Evangelical Lutheran Church</option>
-            
-            <option value="64">Free Methodist</option>
-            
-            <option value="41">Free Will Baptist Church</option>
-            
-            <option value="65">Friends</option>
-            
-            <option value="91">Greek Orthodox</option>
-            
-            <option value="42">Interdenominational</option>
-            
-            <option value="40">International United Pentecostal Church</option>
-            
-            <option value="80">Jewish</option>
-            
-            <option value="94">Latter Day Saints (Mormon Church)</option>
-            
-            <option value="68">Lutheran Church - Missouri Synod</option>
-            
-            <option value="67">Lutheran Church in America</option>
-            
-            <option value="43">Mennonite Brethren Church</option>
-            
-            <option value="69">Mennonite Church</option>
-            
-            <option value="87">Missionary Church Inc</option>
-            
-            <option value="44">Moravian Church</option>
-            
-            <option value="78">Multiple Protestant Denomination</option>
-            
-            <option value="45">North American Baptist</option>
-            
-            <option value="100">Original Free Will Baptist</option>
-            
-            <option value="79">Other Protestant</option>
-            
-            <option value="47">Pentecostal Holiness Church</option>
-            
-            <option value="103">Presbyterian</option>
-            
-            <option value="66">Presbyterian Church (USA)</option>
-            
-            <option value="73">Protestant Episcopal</option>
-            
-            <option value="77">Protestant, not specified</option>
-            
-            <option value="49">Reformed Church in America</option>
-            
-            <option value="81">Reformed Presbyterian Church</option>
-            
-            <option value="30">Roman Catholic</option>
-            
-            <option value="92">Russian Orthodox</option>
-            
-            <option value="95">Seventh Day Adventists</option>
-            
-            <option value="75">Southern Baptist</option>
-            
-            <option value="97">The Presbyterian Church in America</option>
-            
-            <option value="88">Undenominational</option>
-            
-            <option value="93">Unitarian Universalist</option>
-            
-            <option value="84">United Brethren Church</option>
-            
-            <option value="76">United Church of Christ</option>
-            
-            <option value="71">United Methodist</option>
-            
-            <option value="89">Wesleyan</option>
-            
-            <option value="33">Wisconsin Evangelical Lutheran Synod</option>
-            
-            <option value="99">Other (none of the above)</option>
+            <option value="SPECIALIZEDMISSIONS_TRIBAL">Tribal College and University</option>
+			
+			<option value="RELIGIOUSAFFLIATIONS">Religious Affiliations</option>
             
           </select>
         </label>
@@ -923,8 +601,15 @@
 
   </div>
 
-
   </form>
+
+  <div class="container search_form-submit">
+
+    <button class="button button-primary search-button" id="rank-submit" type=button onClick="location.href='/College-Search-Application/collegeranking.php'">
+      COLLEGE RANKINGS
+    </button>
+
+  </div>
 
 </section>
   </section>
