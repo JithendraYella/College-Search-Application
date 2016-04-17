@@ -196,7 +196,7 @@
 
     <div>
 
-      <a target="_blank" href="https://www.ed.gov/"><span class="ed-logo"></span> DBMS Project Group 22 - Tarun,Siva,Jithendra,Pragna</a>
+      <a target="_blank"><span class="ed-logo"></span> DBMS Project Group 22 - Tarun,Siva,Jithendra,Pragna</a>
 
     </div>
 
@@ -206,7 +206,7 @@
 
     <div>
 
-      <h1><a href="/">College Search Application</a></h1>
+      <h1><a href="/College-Search-Application/index.php">College Search Application</a></h1>
 
       <nav>
         <ul>
@@ -301,287 +301,152 @@
   </fieldset>
 
   <fieldset>
-    <legend>Location</legend>
+      <legend>Location</legend>
 
-    <aria-accordion class="container" id="school-location" aria-expanded="true">
+      <aria-accordion class="container" id="school-location" aria-expanded="true">
 
-      <h1 class="search_category">
-        <button aria-controls="location-content" aria-expanded="true" type="button" tabindex="0">
-          Location
-        </button>
-      </h1>
+        <h1 class="search_category">
+          <button aria-controls="location-content" aria-expanded="true" type="button" tabindex="0">
+            Location
+          </button>
+        </h1>
 
-      <div class="accordion-div" aria-hidden="false" id="location-content">
+        <div class="accordion-div" aria-hidden="false" id="location-content">
+          <div class="input-add group_inline">
 
-        <div class="input-add group_inline">
-
-          <div id="label-select-state" class="label">
-            Select a state
+            <div id="label-select-state" class="label"></div>
           </div>
 
-          <select name="state" class="select-state" aria-labelledby="label-select-state" style="display: none;" aria-hidden="true">
-                
-                
-                <option value="AL">Alabama</option>
-                
-                <option value="AK">Alaska</option>
-                
-                <option value="AS">American Samoa</option>
-                
-                <option value="AZ">Arizona</option>
-                
-                <option value="AR">Arkansas</option>
-                
-                <option value="CA">California</option>
-                
-                <option value="CO">Colorado</option>
-                
-                <option value="CT">Connecticut</option>
-                
-                <option value="DE">Delaware</option>
-                
-                <option value="DC">District of Columbia</option>
-                
-                <option value="FL">Florida</option>
-                
-                <option value="GA">Georgia</option>
-                
-                <option value="GU">Guam</option>
-                
-                <option value="HI">Hawaii</option>
-                
-                <option value="ID">Idaho</option>
-                
-                <option value="IL">Illinois</option>
-                
-                <option value="IN">Indiana</option>
-                
-                <option value="IA">Iowa</option>
-                
-                <option value="KS">Kansas</option>
-                
-                <option value="KY">Kentucky</option>
-                
-                <option value="LA">Louisiana</option>
-                
-                <option value="ME">Maine</option>
-                
-                <option value="MD">Maryland</option>
-                
-                <option value="MA">Massachusetts</option>
-                
-                <option value="MI">Michigan</option>
-                
-                <option value="MN">Minnesota</option>
-                
-                <option value="MS">Mississippi</option>
-                
-                <option value="MO">Missouri</option>
-                
-                <option value="MT">Montana</option>
-                
-                <option value="NE">Nebraska</option>
-                
-                <option value="NV">Nevada</option>
-                
-                <option value="NH">New Hampshire</option>
-                
-                <option value="NJ">New Jersey</option>
-                
-                <option value="NM">New Mexico</option>
-                
-                <option value="NY">New York</option>
-                
-                <option value="NC">North Carolina</option>
-                
-                <option value="ND">North Dakota</option>
-                
-                <option value="OH">Ohio</option>
-                
-                <option value="OK">Oklahoma</option>
-                
-                <option value="OR">Oregon</option>
-                
-                <option value="PA">Pennsylvania</option>
-                
-                <option value="PR">Puerto Rico</option>
-                
-                <option value="RI">Rhode Island</option>
-                
-                <option value="SC">South Carolina</option>
-                
-                <option value="SD">South Dakota</option>
-                
-                <option value="TN">Tennessee</option>
-                
-                <option value="TX">Texas</option>
-                
-                <option value="UT">Utah</option>
-                
-                <option value="VT">Vermont</option>
-                
-                <option value="VI">Virgin Islands</option>
-                
-                <option value="VA">Virginia</option>
-                
-                <option value="WA">Washington</option>
-                
-                <option value="WV">West Virginia</option>
-                
-                <option value="WI">Wisconsin</option>
-                
-                <option value="WY">Wyoming</option>
-                
-              </select><div class="multi-select_item">
-            <div class="u-group_inline u-group_inline-left">
-              <select name="" class="select-state" aria-labelledby="label-select-state">
-                <option selected="" value="">Any</option>
-                
-                <option value="AL">Alabama</option>
-                
-                <option value="AK">Alaska</option>
-                
-                <option value="AS">American Samoa</option>
-                
-                <option value="AZ">Arizona</option>
-                
-                <option value="AR">Arkansas</option>
-                
-                <option value="CA">California</option>
-                
-                <option value="CO">Colorado</option>
-                
-                <option value="CT">Connecticut</option>
-                
-                <option value="DE">Delaware</option>
-                
-                <option value="DC">District of Columbia</option>
-                
-                <option value="FL">Florida</option>
-                
-                <option value="GA">Georgia</option>
-                
-                <option value="GU">Guam</option>
-                
-                <option value="HI">Hawaii</option>
-                
-                <option value="ID">Idaho</option>
-                
-                <option value="IL">Illinois</option>
-                
-                <option value="IN">Indiana</option>
-                
-                <option value="IA">Iowa</option>
-                
-                <option value="KS">Kansas</option>
-                
-                <option value="KY">Kentucky</option>
-                
-                <option value="LA">Louisiana</option>
-                
-                <option value="ME">Maine</option>
-                
-                <option value="MD">Maryland</option>
-                
-                <option value="MA">Massachusetts</option>
-                
-                <option value="MI">Michigan</option>
-                
-                <option value="MN">Minnesota</option>
-                
-                <option value="MS">Mississippi</option>
-                
-                <option value="MO">Missouri</option>
-                
-                <option value="MT">Montana</option>
-                
-                <option value="NE">Nebraska</option>
-                
-                <option value="NV">Nevada</option>
-                
-                <option value="NH">New Hampshire</option>
-                
-                <option value="NJ">New Jersey</option>
-                
-                <option value="NM">New Mexico</option>
-                
-                <option value="NY">New York</option>
-                
-                <option value="NC">North Carolina</option>
-                
-                <option value="ND">North Dakota</option>
-                
-                <option value="OH">Ohio</option>
-                
-                <option value="OK">Oklahoma</option>
-                
-                <option value="OR">Oregon</option>
-                
-                <option value="PA">Pennsylvania</option>
-                
-                <option value="PR">Puerto Rico</option>
-                
-                <option value="RI">Rhode Island</option>
-                
-                <option value="SC">South Carolina</option>
-                
-                <option value="SD">South Dakota</option>
-                
-                <option value="TN">Tennessee</option>
-                
-                <option value="TX">Texas</option>
-                
-                <option value="UT">Utah</option>
-                
-                <option value="VT">Vermont</option>
-                
-                <option value="VI">Virgin Islands</option>
-                
-                <option value="VA">Virginia</option>
-                
-                <option value="WA">Washington</option>
-                
-                <option value="WV">West Virginia</option>
-                
-                <option value="WI">Wisconsin</option>
-                
-                <option value="WY">Wyoming</option>
-                
-              </select>
-            </div>
-            <div class="u-group_inline u-group_inline-right u-nowrap">
-              <!--<button class="button button-add" type="button">
-                Add<br>State
-              </button> -->
-			  
-              
-            </div>
-          </div>
+          <label for="state">Select a State
+            <select name="state" id="state" class="select-state" aria-labelledby="label-select-state" aria-hidden="false">
+              <option selected="" value="">Any</option>
 
-        </div>
+              <option value="AL">Alabama</option>
 
-    
-        <div class="group_inline">
+              <option value="AK">Alaska</option>
 
-          <label class="group_inline-left" for="zip-code">Enter a ZIP code
-            <input type="number" autocapitalize="off" autocorrect="off" autocomplete="off" placeholder="e.g., 32608" name="zip" id="zip-code">
+              <option value="AS">American Samoa</option>
+
+              <option value="AZ">Arizona</option>
+
+              <option value="AR">Arkansas</option>
+
+              <option value="CA">California</option>
+
+              <option value="CO">Colorado</option>
+
+              <option value="CT">Connecticut</option>
+
+              <option value="DE">Delaware</option>
+
+              <option value="DC">District of Columbia</option>
+
+              <option value="FL">Florida</option>
+
+              <option value="GA">Georgia</option>
+
+              <option value="GU">Guam</option>
+
+              <option value="HI">Hawaii</option>
+
+              <option value="ID">Idaho</option>
+
+              <option value="IL">Illinois</option>
+
+              <option value="IN">Indiana</option>
+
+              <option value="IA">Iowa</option>
+
+              <option value="KS">Kansas</option>
+
+              <option value="KY">Kentucky</option>
+
+              <option value="LA">Louisiana</option>
+
+              <option value="ME">Maine</option>
+
+              <option value="MD">Maryland</option>
+
+              <option value="MA">Massachusetts</option>
+
+              <option value="MI">Michigan</option>
+
+              <option value="MN">Minnesota</option>
+
+              <option value="MS">Mississippi</option>
+
+              <option value="MO">Missouri</option>
+
+              <option value="MT">Montana</option>
+
+              <option value="NE">Nebraska</option>
+
+              <option value="NV">Nevada</option>
+
+              <option value="NH">New Hampshire</option>
+
+              <option value="NJ">New Jersey</option>
+
+              <option value="NM">New Mexico</option>
+
+              <option value="NY">New York</option>
+
+              <option value="NC">North Carolina</option>
+
+              <option value="ND">North Dakota</option>
+
+              <option value="OH">Ohio</option>
+
+              <option value="OK">Oklahoma</option>
+
+              <option value="OR">Oregon</option>
+
+              <option value="PA">Pennsylvania</option>
+
+              <option value="PR">Puerto Rico</option>
+
+              <option value="RI">Rhode Island</option>
+
+              <option value="SC">South Carolina</option>
+
+              <option value="SD">South Dakota</option>
+
+              <option value="TN">Tennessee</option>
+
+              <option value="TX">Texas</option>
+
+              <option value="UT">Utah</option>
+
+              <option value="VT">Vermont</option>
+
+              <option value="VI">Virgin Islands</option>
+
+              <option value="VA">Virginia</option>
+
+              <option value="WA">Washington</option>
+
+              <option value="WV">West Virginia</option>
+
+              <option value="WI">Wisconsin</option>
+
+              <option value="WY">Wyoming</option>
+
+            </select>
           </label>
+
+          <div class="group_inline">
+
+            <label class="group_inline-left" for="zip-code">Enter a ZIP code
+              <input type="number" autocapitalize="off" autocorrect="off" autocomplete="off" placeholder="e.g., 45400" name="zip" id="zip-code">
+            </label>
+          </div>
+
         </div>
+        <input type="submit" tabindex="-1" class="sr-only" value="Submit">
 
-        <!--
-        <label for="online" class="checkbox">
-          <input id="online" type="checkbox" name="online" checked value="1" tabindex="0">
-          <span tabindex="-1" class="checkbox-focus"></span>Include Online-Only Schools
-        </label>
-        -->
+      </aria-accordion>
 
-      </div>
-
-      <input type="submit" tabindex="-1" class="sr-only" value="Submit">
-
-    </aria-accordion>
-
-  </fieldset>
+    </fieldset>
 
   <fieldset>
     <legend>Size</legend>
@@ -603,19 +468,19 @@
           <ul>
             <li>
               <label class="checkbox" for="size-small">
-                <input type="checkbox" tabindex="0" value="small" name="size" id="size-small">
+                <input type="checkbox" tabindex="0" value="small" name="size[]" id="size-small">
                 <span class="checkbox-focus" tabindex="-1"></span>Small (&lt; 2,000)
               </label>
             </li>
             <li>
               <label class="checkbox" for="size-medium">
-                <input type="checkbox" tabindex="0" value="medium" name="size" id="size-medium">
+                <input type="checkbox" tabindex="0" value="medium" name="size[]" id="size-medium">
                 <span class="checkbox-focus" tabindex="-1"></span>Medium (2,000&ndash;15,000)
               </label>
             </li>
             <li>
               <label class="checkbox" for="size-large">
-                <input type="checkbox" tabindex="0" value="large" name="size" id="size-large">
+                <input type="checkbox" tabindex="0" value="large" name="size[]" id="size-large">
                 <span class="checkbox-focus" tabindex="-1"></span>Large (&gt; 15,000)
               </label>
             </li>
@@ -673,19 +538,19 @@
           <ul>
             <li>
               <label class="checkbox" for="type-public">
-                <input type="checkbox" tabindex="0" value="public" name="control" id="type-public">
+                <input type="checkbox" tabindex="0" value="public" name="control[]" id="type-public">
                 <span class="checkbox-focus" tabindex="-1"></span>Public
               </label>
             </li>
             <li>
               <label class="checkbox" for="type-private">
-                <input type="checkbox" tabindex="0" value="private" name="control" id="type-private">
+                <input type="checkbox" tabindex="0" value="private" name="control[]" id="type-private">
                 <span class="checkbox-focus" tabindex="-1"></span>Private Nonprofit
               </label>
             </li>
             <li>
               <label class="checkbox" for="type-profit">
-                <input type="checkbox" tabindex="0" value="profit" name="control" id="type-profit">
+                <input type="checkbox" tabindex="0" value="profit" name="control[]" id="type-profit">
                 <span class="checkbox-focus" tabindex="-1"></span>Private For-Profit
               </label>
             </li>
@@ -736,8 +601,15 @@
 
   </div>
 
-
   </form>
+
+  <div class="container search_form-submit">
+
+    <button class="button button-primary search-button" id="rank-submit" type=button onClick="location.href='/College-Search-Application/collegeranking.php'">
+      COLLEGE RANKINGS
+    </button>
+
+  </div>
 
 </section>
   </section>
