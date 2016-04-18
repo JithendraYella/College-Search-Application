@@ -284,8 +284,15 @@
 				
 				if (isset($_GET['state'])) {
                     $state = $_GET['state'];
-					$thisisit = oci_parse($conn, "INSERT INTO temp2 SELECT UNIID FROM COLLEGE1 WHERE state LIKE '%%' AND UNIID IN (SELECT UNIID FROM temp1)");
-					oci_execute($thisisit);
+					if(strcmp($state,'Any')==0){
+						//echo "Any selected<br />";
+						$thisisit = oci_parse($conn, "INSERT INTO temp2 SELECT UNIID FROM COLLEGE1 WHERE UNIID IN (SELECT UNIID FROM temp1)");
+						oci_execute($thisisit);
+					}
+					else{
+						$thisisit = oci_parse($conn, "INSERT INTO temp2 SELECT UNIID FROM COLLEGE1 WHERE state LIKE '$state' AND UNIID IN (SELECT UNIID FROM temp1)");
+						oci_execute($thisisit);
+					}
 					$stid = oci_parse($conn, "DELETE FROM temp1");
 					oci_execute($stid);
                 }
@@ -320,19 +327,75 @@
 					oci_execute($stid);
                 }
 
-                $size = array();
-                if (isset($_GET['size'])) {
-                    foreach($_GET['size'] as $sizevalue) {
-                        $size[] = $sizevalue;
-                    }
-                }
-
-                $control = array();
+				
+				$control = array();
+				$public=-1;
+				$private = -1;
+				$profit = -1;
                 if (isset($_GET['control'])) {
                     foreach($_GET['control'] as $controlvalue) {
+						if(strcmp($controlvalue,'public')==0){
+							$public = '1';
+						}
+						if(strcmp($controlvalue,'private')==0){
+							$private = '2';
+						}
+						if(strcmp($controlvalue,'profit')==0){
+							$profit = '3';
+						}
                         $control[] = $controlvalue;
                     }
+					if($public > -1 || $private > -1 || $profit > -1){
+						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM UNITYPE WHERE (TYPE=$public OR TYPE=$private OR TYPE=$profit) AND UNIID IN (SELECT UNIID FROM temp2)");
+						oci_execute($thisisit);
+					}
                 }
+				else{
+					$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM temp2");
+					oci_execute($thisisit);
+					}
+				$stid = oci_parse($conn, "DELETE FROM temp2");
+				oci_execute($stid);
+				
+				
+				$size = array();
+				$smallmin=-1;$smallmax=-1;
+				$medmin=-1;$medmax=-1;
+				$lmin=-1; $lmax = -1;
+                if (isset($_GET['size'])) {
+                    foreach($_GET['size'] as $sizevalue) {
+						if(strcmp($sizevalue,'small')==0){
+							$smallmin=1;$smallmax=2000;
+						}
+						if(strcmp($sizevalue,'medium')==0){
+							$medmin=2000;$medmax=15000;
+						}
+						if(strcmp($sizevalue,'large')==0){
+							$lmin=15000; $lmax = 100000;
+						}
+                        $size[] = $sizevalue;
+                    }
+					if($smallmax > -1 || $medmax > -1 || $lmin > -1 ){
+						
+						$thisisit = oci_parse($conn, "INSERT INTO temp2 SELECT UNIID FROM 
+						(SELECT UNIID FROM STUDENTBODY WHERE strength>$smallmin AND strength<=$smallmax 
+						UNION
+						SELECT UNIID FROM STUDENTBODY WHERE strength>$medmin AND strength<=$medmax
+						UNION
+						SELECT UNIID FROM STUDENTBODY WHERE strength>$lmin AND strength <= $lmax) where UNIID IN (SELECT UNIID from temp1)");
+						oci_execute($thisisit);
+					}
+					
+                }
+				else {
+					$thisisit = oci_parse($conn, "INSERT INTO temp3 SELECT UNIID FROM temp1");
+					oci_execute($thisisit);
+				}
+					
+				$stid = oci_parse($conn, "DELETE FROM temp1");
+				oci_execute($stid);
+
+
 				
                 /*if (isset($_GET['size'])) {
                     $size = array();

@@ -319,7 +319,7 @@
 
           <label for="state">Select a State
             <select name="state" id="state" class="select-state" aria-labelledby="label-select-state" aria-hidden="false">
-              <option selected="" value="">Any</option>
+              <option selected="" value="Any">Any</option>
 
               <option value="AL">Alabama</option>
 

@@ -1,0 +1,70 @@
+				$control = array();
+				$public=-1;
+				$private = -1;
+				$profit = -1;
+                if (isset($_GET['control'])) {
+                    foreach($_GET['control'] as $controlvalue) {
+						if(strcmp($controlvalue,'public')==0){
+							$public = '1';
+						}
+						if(strcmp($controlvalue,'private')==0){
+							$private = '2';
+						}
+						if(strcmp($controlvalue,'profit')==0){
+							$profit = '3';
+						}
+                        $control[] = $controlvalue;
+                    }
+					echo $public;
+					echo $private;
+					echo $profit;
+					$thisisit = oci_parse($conn, "INSERT INTO temp2 SELECT UNIID FROM UNITYPE WHERE (TYPE=$public OR TYPE=$private OR TYPE=$profit) AND UNIID IN (SELECT UNIID FROM temp1)");
+					oci_execute($thisisit);
+					$stid = oci_parse($conn, "DELETE FROM temp1");
+					oci_execute($stid);
+                }
+				
+				$size = array();
+				$smallmin=-1;$smallmax=-1;
+				$medmin=-1;$medmax=-1;
+				$lmin=-1;
+                if (isset($_GET['size'])) {
+                    foreach($_GET['size'] as $sizevalue) {
+						if(strcmp($sizevalue,'small')==0){
+							$smallmin=1;$smallmax=2000;
+						}
+						if(strcmp($sizevalue,'medium')==0){
+							$medmin=2000;$medmax=15000;
+						}
+						if(strcmp($sizevalue,'large')==0){
+							$lmin=15000;
+						}
+                        $size[] = $sizevalue;
+                    }
+					$thisisit = oci_parse($conn, "INSERT INTO temp1 
+					(SELECT UNIID FROM STUDENTBODY WHERE strength>$smallmin AND strength<$smallmax AND UNIID IN (SELECT UNIID FROM temp2)
+					UNION
+					SELECT UNIID FROM STUDENTBODY WHERE strength>$medmin AND strength<$medmax AND UNIID IN (SELECT UNIID FROM temp2)
+					UNION
+					SELECT UNIID FROM STUDENTBODY WHERE strength>$lmin AND UNIID IN (SELECT UNIID FROM temp2))");
+					oci_execute($thisisit);
+					$stid = oci_parse($conn, "DELETE FROM temp2");
+					oci_execute($stid);
+                }
+				
+				$size = array();
+                if (isset($_GET['size'])) {
+                    foreach($_GET['size'] as $sizevalue) {
+                        $size[] = $sizevalue;
+                    }
+                }
+				
+				
+				$thisisit = oci_parse($conn, "INSERT INTO temp3 SELECT UNIID FROM 
+						(SELECT UNIID FROM STUDENTBODY WHERE strength>-1 AND strength<=10 
+						UNION
+						SELECT UNIID FROM STUDENTBODY WHERE strength>11 AND strength<=50
+						UNION
+						SELECT UNIID FROM STUDENTBODY WHERE strength>50 AND strength <= 100)
+						WHERE UNIID IN (SELECT UNIID FROM temp1)");
+				
