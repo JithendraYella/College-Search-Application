@@ -388,13 +388,22 @@
 					
                 }
 				else {
-					$thisisit = oci_parse($conn, "INSERT INTO temp3 SELECT UNIID FROM temp1");
+					$thisisit = oci_parse($conn, "INSERT INTO temp2 SELECT UNIID FROM temp1");
 					oci_execute($thisisit);
 				}
 					
 				$stid = oci_parse($conn, "DELETE FROM temp1");
 				oci_execute($stid);
 
+				if (isset($_GET['name'])) {
+                    $name = $_GET['name'];					
+					$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM COLLEGE1 WHERE NAME LIKE '%$name%' AND UNIID IN (SELECT UNIID FROM temp2) ");
+//					AND UNIID IN (SELECT UNIID FROM temp2)");
+					oci_execute($thisisit);
+					echo $name;
+					$stid = oci_parse($conn, "DELETE FROM temp2");
+					oci_execute($stid);
+                }
 
 				
                 /*if (isset($_GET['size'])) {
@@ -472,14 +481,6 @@
                 echo "<div class=\"rankstyling\">";
                 echo "<p><h1>RESULTS</h1></p>";
                 echo "</div>";
-
-				if (isset($_GET['name'])) {
-                    $name = $_GET['name'];
-					$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM COLLEGE1 WHERE name LIKE '%$name%' AND UNIID IN (SELECT UNIID FROM temp2)");
-					oci_execute($thisisit);
-					$stid = oci_parse($conn, "DELETE FROM temp2");
-					oci_execute($stid);
-                }
 				
                 $stid = oci_parse($conn, "SELECT * FROM COLLEGE1 WHERE UNIID IN (SELECT UNIID FROM temp1)");
                 oci_execute($stid);
