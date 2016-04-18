@@ -39,7 +39,7 @@
     <!-- Styles
     ================================================== -->
 
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
 
 
 
@@ -258,17 +258,20 @@
             If (!$conn){
                 echo 'Failed to connect to Oracle';
                 }
+
             else {
                 echo '<br/>';
                 echo '<br/>';
                 echo "Input Parameters :";
                 echo '<br/>';
 				
+
 				$stid = oci_parse($conn, "DELETE FROM temp1");
                 oci_execute($stid);
 				$stid = oci_parse($conn, "DELETE FROM temp2");
                 oci_execute($stid);
 				
+
 				if (isset($_GET['major'])) {
                     $prog = $_GET['major'];
 					if(strcmp($prog,'Any')==0){
@@ -276,12 +279,15 @@
 						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM ACADEMICS1");
 						oci_execute($thisisit);
 					}
+
 					else{
 						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM ACADEMICS1 WHERE $prog > 0");
 						oci_execute($thisisit);
 					}
+
                 }
 				
+
 				if (isset($_GET['state'])) {
                     $state = $_GET['state'];
 					if(strcmp($state,'Any')==0){
@@ -297,6 +303,7 @@
 					oci_execute($stid);
                 }
 				
+
                 if (isset($_GET['zip'])) {
                     $zip = $_GET['zip'];
 					//echo "$zip";
@@ -304,10 +311,12 @@
 						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM COLLEGE1 WHERE zip < $zip+100 AND zip > $zip-100 AND UNIID IN (SELECT UNIID FROM temp2)");
 						oci_execute($thisisit);
 					}
+
 					else{
 						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM COLLEGE1 WHERE UNIID IN (SELECT UNIID FROM temp2)");
 						oci_execute($thisisit);
 					}
+
 					$stid = oci_parse($conn, "DELETE FROM temp2");
 					oci_execute($stid);
                 }
@@ -337,6 +346,8 @@
 						if(strcmp($controlvalue,'public')==0){
 							$public = '1';
 						}
+
+
 						if(strcmp($controlvalue,'private')==0){
 							$private = '2';
 						}
@@ -344,11 +355,18 @@
 							$profit = '3';
 						}
                         $control[] = $controlvalue;
+
+
+
                     }
 					if($public > -1 || $private > -1 || $profit > -1){
+
 						$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM UNITYPE WHERE (TYPE=$public OR TYPE=$private OR TYPE=$profit) AND UNIID IN (SELECT UNIID FROM temp2)");
 						oci_execute($thisisit);
 					}
+
+
+
                 }
 				else{
 					$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM temp2");
@@ -358,6 +376,7 @@
 				oci_execute($stid);
 				
 				
+
 				$size = array();
 				$smallmin=-1;$smallmax=-1;
 				$medmin=-1;$medmax=-1;
@@ -397,12 +416,17 @@
 
 				if (isset($_GET['name'])) {
                     $name = $_GET['name'];					
-					$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM COLLEGE1 WHERE UPPER(NAME) LIKE UPPER('%$name%') AND UNIID IN (SELECT UNIID FROM temp2) ");
+					$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM COLLEGE1 WHERE NAME LIKE '%$name%' AND UNIID IN (SELECT UNIID FROM temp2) ");
 //					AND UNIID IN (SELECT UNIID FROM temp2)");
 					oci_execute($thisisit);
 					echo $name;
 					$stid = oci_parse($conn, "DELETE FROM temp2");
 					oci_execute($stid);
+
+
+
+
+
                 }
 
 				
@@ -446,18 +470,22 @@
                 }
                 if (isset($state)) {
                 echo "State: ".$state;
+
                 echo '<br/>';
                 }
                 if (isset($zip)) {
                 echo "Zip: ".$zip;
+
                 echo '<br/>';
                 }
                 if (isset($prog)) {
-                echo "Program: ".$prog;
+                echo "program: ".$prog;
+
                 echo '<br/>';
                 }
                 if (isset($miss)) {
                 echo "Missionary: ".$miss;
+
                 echo '<br/>';
                 }
                 if (isset($religious)) {
@@ -477,17 +505,14 @@
                     echo $control[$y];
                     echo '<br/>';*/
                 }
-				
-				
-				
                 echo '<br/>';
                 echo '<br/>';
 
                 echo "<div class=\"rankstyling\">";
                 echo "<p><h1>RESULTS</h1></p>";
                 echo "</div>";
-				
-                $stid = oci_parse($conn, "SELECT * FROM COLLEGE1 WHERE UNIID IN (SELECT UNIID FROM temp1)");
+
+                $stid = oci_parse($conn, "SELECT * FROM COLLEGE1 c, cost ca WHERE c.UNIID = ca.UNIID AND c.UNIID IN (SELECT UNIID FROM temp1) ORDER BY ca.costofattendance DESC");
                 oci_execute($stid);
 
                 echo "<br>";

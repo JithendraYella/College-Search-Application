@@ -208,7 +208,7 @@
 
         <div>
 
-            <h1><a href="/">College Search Application</a></h1>
+            <h1><a href="/College-Search-Application/index.php">College Search Application</a></h1>
 
             <nav>
                 <ul>
@@ -237,7 +237,7 @@
         
             <div>
                 <?php
-                $conn = oci_connect("sainath", "siva123#", "oracle.cise.ufl.edu:1521/orcl");
+                $conn = oci_connect("jyella", "jithu123#", "oracle.cise.ufl.edu:1521/orcl");
 
                 If (!$conn)
                     echo 'Failed to connect to Oracle';
@@ -507,8 +507,8 @@
 					<?php
 					//$stid8 = oci_parse($conn, "SELECT AGRICULTURE_PROGRAMS, ENGINEERING_PROGRAMS, CS_IS_PROGRAMS, ARTS_PROGRAMS, FOREIGNLANGUAGE_PROGRAMS, PSYCHOLOGY_PROGRAMS, LAW_PROGRAMS, HEALTH_PROGRAMS, SOCIALSCIENCES_PROGRAMS, BUSINESSANDMANAGEMENT_PROGRAMS, INTERANDOTHER_PROGRAMS FROM ACADEMICS1 WHERE UNIID='$collegeID'");
 					
-					$stid8 = oci_parse($conn, "SELECT column_name FROM all_tab_cols WHERE  table_name = 'ACADEMICS1'AND column_name NOT IN ( 'UNIID' )");
-			
+					//$stid8 = oci_parse($conn, "SELECT column_name FROM all_tab_cols WHERE  table_name = 'ACADEMICS1' AND column_name NOT IN ( 'UNIID' ) ORDER BY column_name");
+					$stid8 = oci_parse($conn, "SELECT OUT_PROGRAMS($collegeID) FROM DUAL");
                     oci_execute($stid8);
 					
                     echo "<br>";

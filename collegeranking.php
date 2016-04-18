@@ -197,7 +197,7 @@
 
         <div>
 
-            <a target="_blank" href="https://www.ed.gov/"><span class="ed-logo"></span> DBMS Project Group 22 - Tarun,Siva,Jithendra,Pragna</a>
+            <a target="_blank"><span class="ed-logo"></span> DBMS Project Group 22 - Tarun,Siva,Jithendra,Pragna</a>
 
         </div>
 
@@ -207,7 +207,7 @@
 
         <div>
 
-            <h1><a href="/">College Search Application</a></h1>
+            <h1><a href="/College-Search-Application/index.php">College Search Application</a></h1>
 
             <nav>
                 <ul>
@@ -233,20 +233,60 @@
 <main>
     <!-- background image -->
     <div class="container show-loaded">
-        <div class="results-sort u-group_inline">
-            <div class="u-group_inline-left">
-                <label for="select-sort">Sort:</label>
-            </div>
-            <div class="u-group_inline-right">
-                <select id="select-sort" name="sort">
-                    <option value="name:asc" selected="">Name (A to Z)</option>
-                    <option value="advantage:desc" >% Earning Above HS Grad</option>
-                    <option value="avg_net_price:asc">Average Annual Cost</option>
-                    <option value="completion_rate:desc">Graduation Rate</option>
-                    <option value="salary:desc">Salary After Attending</option>
-                    <option value="size:asc">Size (Small to Large)</option>
-                </select>
-            </div>
+        <div class="results-sort u-group_inlineaa">
+            <?php
+            $rankgraduationrate = 'collegerankinggraduationrate.php';
+            $ranksize = 'collegerankingsize.php';
+            $rankcostatt = 'collegerankingcostofatt.php';
+            $rankretentionrate = 'collegerankingretentionrate.php';
+
+            echo "<br/>";
+            echo "<br/>";
+            echo "<input class=\"rankbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$rankgraduationrate'\" value=\"Graduation Rate Ranking\">";
+            echo "<input class=\"rankbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$ranksize'\" value=\"College Size Ranking\">";
+            echo "<input class=\"rankbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$rankcostatt'\" value=\"Cost of Attendance Ranking\">";
+            echo "<input class=\"rankbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$rankretentionrate'\" value=\"Retention Rate Ranking\">";
+            ?>
+        </div>
+
+        <br/>
+        <br/>
+        <div class="rankstyling">
+        <p><h1>LIST OF ALL COLLEGES</h1></p>
+        </div>
+
+        <div class="queryresult">
+            <?php
+            $conn = oci_connect("jyella", "jithu123#", "oracle.cise.ufl.edu:1521/orcl");
+
+            If (!$conn){
+                echo 'Failed to connect to Oracle';
+            }
+            else {
+                $stid = oci_parse($conn, "SELECT * FROM COLLEGE1 ORDER BY NAME");
+                oci_execute($stid);
+
+                echo "<br>";
+                echo "<br>";
+                echo "<table border=\"2\" cellpadding=\"5\" cellspacing=\"2\" style=\"text-align: center;\">";
+                echo "<tr style=\"text-align: center;\">";
+                echo "<th style=\"width: 100px;\">S No.</th>";
+                echo "<th style=\"width: 600px;\">College Name</th>";
+                echo "</tr>\n";
+                $count = 0;
+                while (($row = oci_fetch_object($stid)) != false) {
+                $universityID = htmlentities($row->UNIID, ENT_QUOTES, "UTF-8");
+                $universityName = htmlentities($row->NAME, ENT_QUOTES, "UTF-8");
+                echo "<tr>\n";
+                echo "<td>".(++$count)."</td>";
+                echo "<td><a href=\"collegedetails.php?id=$universityID\">".$universityName."</a></td>";
+                    echo "</tr>\n";
+                }
+                echo "</table>\n";
+            }
+
+            oci_close($conn);
+            ?>
         </div>
 
 

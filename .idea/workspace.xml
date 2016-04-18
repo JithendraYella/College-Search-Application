@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="aeda8c32-8608-4616-bbb0-68535d781139" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/collegelist.php" afterPath="$PROJECT_DIR$/collegelist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/collegeranking.php" afterPath="$PROJECT_DIR$/collegeranking.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+    </list>
+    <ignored path="College-Search-Application.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="College-Search-Application" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="collegeranking.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/collegeranking.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="31.226416">
+              <caret line="209" column="25" selection-start-line="209" selection-start-column="25" selection-end-line="209" selection-end-column="62" />
+              <folding>
+                <marker date="1460877399508" expanded="true" signature="24444:24643" placeholder="..." />
+                <marker date="1460877399508" expanded="true" signature="24472:24636" placeholder="..." />
+                <marker date="1460877399508" expanded="true" signature="24485:24625" placeholder="..." />
+                <marker date="1460877399508" expanded="true" signature="26266:26302" placeholder="SELECT * FRO... COLLEGE1" />
+                <marker date="1460877399508" expanded="true" signature="26487:26506" placeholder="..." />
+                <marker date="1460877399508" expanded="true" signature="26546:26565" placeholder="..." />
+                <marker date="1460877399508" expanded="true" signature="26605:26618" placeholder="..." />
+                <marker date="1460877399508" expanded="true" signature="26668:26681" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="collegelist.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/collegelist.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="41.490566">
+              <caret line="408" column="24" selection-start-line="408" selection-start-column="16" selection-end-line="410" selection-end-column="30" />
+              <folding>
+                <marker date="1460878407878" expanded="true" signature="24460:24659" placeholder="..." />
+                <marker date="1460878407878" expanded="true" signature="24488:24652" placeholder="..." />
+                <marker date="1460878407878" expanded="true" signature="24501:24641" placeholder="..." />
+                <marker date="1460878407878" expanded="true" signature="26750:26767" placeholder="DELETE FROM " />
+                <marker date="1460878407878" expanded="true" signature="26837:26854" placeholder="DELETE FROM " />
+                <marker date="1460878407878" expanded="true" signature="27080:27126" placeholder="INSERT INTO temp1... " />
+                <marker date="1460878407878" expanded="true" signature="27098:27126" placeholder="SELECT UNIID... ACADEMICS1" />
+                <marker date="1460878407878" expanded="true" signature="27214:27276" placeholder="INSERT INTO temp1... " />
+                <marker date="1460878407878" expanded="true" signature="27232:27276" placeholder="SELECT UNIID... ACADEMICS1" />
+                <marker date="1460878407878" expanded="true" signature="27453:27558" placeholder="INSERT INTO temp2... " />
+                <marker date="1460878407878" expanded="true" signature="27471:27558" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460878407878" expanded="true" signature="27534:27557" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460878407878" expanded="true" signature="27622:27639" placeholder="DELETE FROM " />
+                <marker date="1460878407878" expanded="true" signature="27850:27973" placeholder="INSERT INTO temp1... " />
+                <marker date="1460878407878" expanded="true" signature="27868:27973" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460878407878" expanded="true" signature="27949:27972" placeholder="SELECT UNIID... temp2" />
+                <marker date="1460878407878" expanded="true" signature="28061:28146" placeholder="INSERT INTO temp1... " />
+                <marker date="1460878407878" expanded="true" signature="28079:28146" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460878407878" expanded="true" signature="28122:28145" placeholder="SELECT UNIID... temp2" />
+                <marker date="1460878407878" expanded="true" signature="28218:28235" placeholder="DELETE FROM " />
+                <marker date="1460878407878" expanded="true" signature="28472:28556" placeholder="INSERT INTO temp2... " />
+                <marker date="1460878407878" expanded="true" signature="28490:28556" placeholder="SELECT UNIID... UNITYPE" />
+                <marker date="1460878407878" expanded="true" signature="28532:28555" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460878407878" expanded="true" signature="28644:28742" placeholder="INSERT INTO temp2... " />
+                <marker date="1460878407878" expanded="true" signature="28662:28742" placeholder="SELECT UNIID... UNITYPE" />
+                <marker date="1460878407878" expanded="true" signature="28718:28741" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460878407878" expanded="true" signature="28814:28831" placeholder="DELETE FROM " />
+                <marker date="1460878407878" expanded="true" signature="32831:32940" placeholder="INSERT INTO temp1... " />
+                <marker date="1460878407878" expanded="true" signature="32849:32940" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460878407878" expanded="true" signature="32916:32939" placeholder="SELECT UNIID... temp2" />
+                <marker date="1460878407878" expanded="true" signature="33004:33021" placeholder="DELETE FROM " />
+                <marker date="1460878407878" expanded="true" signature="33115:33178" placeholder="SELECT * FRO... COLLEGE1" />
+                <marker date="1460878407878" expanded="true" signature="33154:33177" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460878407878" expanded="true" signature="33363:33382" placeholder="..." />
+                <marker date="1460878407878" expanded="true" signature="33422:33441" placeholder="..." />
+                <marker date="1460878407878" expanded="true" signature="33481:33494" placeholder="..." />
+                <marker date="1460878407878" expanded="true" signature="33544:33557" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="collegelistinggraduationrate.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sortandrank/collegelistinggraduationrate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="27.731707">
+              <caret line="409" column="63" selection-start-line="409" selection-start-column="29" selection-end-line="409" selection-end-column="63" />
+              <folding>
+                <marker date="1460878855947" expanded="true" signature="24463:24662" placeholder="..." />
+                <marker date="1460878855947" expanded="true" signature="24491:24655" placeholder="..." />
+                <marker date="1460878855947" expanded="true" signature="24504:24644" placeholder="..." />
+                <marker date="1460878855947" expanded="true" signature="26757:26774" placeholder="DELETE FROM " />
+                <marker date="1460878855947" expanded="true" signature="26856:26873" placeholder="DELETE FROM " />
+                <marker date="1460878855947" expanded="true" signature="27158:27204" placeholder="INSERT INTO temp1... " />
+                <marker date="1460878855947" expanded="true" signature="27176:27204" placeholder="SELECT UNIID... ACADEMICS1" />
+                <marker date="1460878855947" expanded="true" signature="27358:27420" placeholder="INSERT INTO temp1... " />
+                <marker date="1460878855947" expanded="true" signature="27376:27420" placeholder="SELECT UNIID... ACADEMICS1" />
+                <marker date="1460878855947" expanded="true" signature="27653:27758" placeholder="INSERT INTO temp2... " />
+                <marker date="1460878855947" expanded="true" signature="27671:27758" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460878855947" expanded="true" signature="27734:27757" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460878855947" expanded="true" signature="27852:27869" placeholder="DELETE FROM " />
+                <marker date="1460878855947" expanded="true" signature="28139:28262" placeholder="INSERT INTO temp1... " />
+                <marker date="1460878855947" expanded="true" signature="28157:28262" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460878855947" expanded="true" signature="28238:28261" placeholder="SELECT UNIID... temp2" />
+                <marker date="1460878855947" expanded="true" signature="28416:28501" placeholder="INSERT INTO temp1... " />
+                <marker date="1460878855947" expanded="true" signature="28434:28501" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460878855947" expanded="true" signature="28477:28500" placeholder="SELECT UNIID... temp2" />
+                <marker date="1460878855947" expanded="true" signature="28621:28638" placeholder="DELETE FROM " />
+                <marker date="1460878855947" expanded="true" signature="28949:29033" placeholder="INSERT INTO temp2... " />
+                <marker date="1460878855947" expanded="true" signature="28967:29033" placeholder="SELECT UNIID... UNITYPE" />
+                <marker date="1460878855947" expanded="true" signature="29009:29032" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460878855947" expanded="true" signature="29187:29285" placeholder="INSERT INTO temp2... " />
+                <marker date="1460878855947" expanded="true" signature="29205:29285" placeholder="SELECT UNIID... UNITYPE" />
+                <marker date="1460878855947" expanded="true" signature="29261:29284" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460878855947" expanded="true" signature="29405:29422" placeholder="DELETE FROM " />
+                <marker date="1460878855947" expanded="true" signature="33539:33648" placeholder="INSERT INTO temp1... " />
+                <marker date="1460878855947" expanded="true" signature="33557:33648" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460878855947" expanded="true" signature="33624:33647" placeholder="SELECT UNIID... temp2" />
+                <marker date="1460878855947" expanded="true" signature="33742:33759" placeholder="DELETE FROM " />
+                <marker date="1460878855947" expanded="true" signature="33864:33941" placeholder="SELECT * FRO... COLLEGE1" />
+                <marker date="1460878855947" expanded="true" signature="33903:33926" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460878855947" expanded="true" signature="34126:34145" placeholder="..." />
+                <marker date="1460878855947" expanded="true" signature="34185:34204" placeholder="..." />
+                <marker date="1460878855947" expanded="true" signature="34244:34257" placeholder="..." />
+                <marker date="1460878855947" expanded="true" signature="34307:34320" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="collegelistingcostofatt.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sortandrank/collegelistingcostofatt.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.9146341">
+              <caret line="408" column="16" selection-start-line="408" selection-start-column="16" selection-end-line="410" selection-end-column="30" />
+              <folding>
+                <marker date="1460879081570" expanded="true" signature="24463:24662" placeholder="..." />
+                <marker date="1460879081570" expanded="true" signature="24491:24655" placeholder="..." />
+                <marker date="1460879081570" expanded="true" signature="24504:24644" placeholder="..." />
+                <marker date="1460879081570" expanded="true" signature="26757:26774" placeholder="DELETE FROM " />
+                <marker date="1460879081570" expanded="true" signature="26856:26873" placeholder="DELETE FROM " />
+                <marker date="1460879081570" expanded="true" signature="27158:27204" placeholder="INSERT INTO temp1... " />
+                <marker date="1460879081570" expanded="true" signature="27176:27204" placeholder="SELECT UNIID... ACADEMICS1" />
+                <marker date="1460879081570" expanded="true" signature="27358:27420" placeholder="INSERT INTO temp1... " />
+                <marker date="1460879081570" expanded="true" signature="27376:27420" placeholder="SELECT UNIID... ACADEMICS1" />
+                <marker date="1460879081570" expanded="true" signature="27653:27758" placeholder="INSERT INTO temp2... " />
+                <marker date="1460879081570" expanded="true" signature="27671:27758" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460879081570" expanded="true" signature="27734:27757" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460879081570" expanded="true" signature="27852:27869" placeholder="DELETE FROM " />
+                <marker date="1460879081570" expanded="true" signature="28139:28262" placeholder="INSERT INTO temp1... " />
+                <marker date="1460879081570" expanded="true" signature="28157:28262" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460879081570" expanded="true" signature="28238:28261" placeholder="SELECT UNIID... temp2" />
+                <marker date="1460879081570" expanded="true" signature="28416:28501" placeholder="INSERT INTO temp1... " />
+                <marker date="1460879081570" expanded="true" signature="28434:28501" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460879081570" expanded="true" signature="28477:28500" placeholder="SELECT UNIID... temp2" />
+                <marker date="1460879081570" expanded="true" signature="28621:28638" placeholder="DELETE FROM " />
+                <marker date="1460879081570" expanded="true" signature="28949:29033" placeholder="INSERT INTO temp2... " />
+                <marker date="1460879081570" expanded="true" signature="28967:29033" placeholder="SELECT UNIID... UNITYPE" />
+                <marker date="1460879081570" expanded="true" signature="29009:29032" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460879081570" expanded="true" signature="29187:29285" placeholder="INSERT INTO temp2... " />
+                <marker date="1460879081570" expanded="true" signature="29205:29285" placeholder="SELECT UNIID... UNITYPE" />
+                <marker date="1460879081570" expanded="true" signature="29261:29284" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460879081570" expanded="true" signature="29405:29422" placeholder="DELETE FROM " />
+                <marker date="1460879081570" expanded="true" signature="33542:33651" placeholder="INSERT INTO temp1... " />
+                <marker date="1460879081570" expanded="true" signature="33560:33651" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460879081570" expanded="true" signature="33627:33650" placeholder="SELECT UNIID... temp2" />
+                <marker date="1460879081570" expanded="true" signature="33745:33762" placeholder="DELETE FROM " />
+                <marker date="1460879081570" expanded="true" signature="33867:33944" placeholder="SELECT * FRO... COLLEGE1" />
+                <marker date="1460879081570" expanded="true" signature="33906:33929" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460879081570" expanded="true" signature="34129:34148" placeholder="..." />
+                <marker date="1460879081570" expanded="true" signature="34188:34207" placeholder="..." />
+                <marker date="1460879081570" expanded="true" signature="34247:34260" placeholder="..." />
+                <marker date="1460879081570" expanded="true" signature="34310:34323" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="collegelistingnameretentionrate.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sortandrank/collegelistingnameretentionrate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.2926829">
+              <caret line="407" column="16" selection-start-line="407" selection-start-column="16" selection-end-line="409" selection-end-column="30" />
+              <folding>
+                <marker date="1460879081570" expanded="true" signature="24463:24662" placeholder="..." />
+                <marker date="1460879081570" expanded="true" signature="24491:24655" placeholder="..." />
+                <marker date="1460879081570" expanded="true" signature="24504:24644" placeholder="..." />
+                <marker date="1460879081570" expanded="true" signature="26757:26774" placeholder="DELETE FROM " />
+                <marker date="1460879081570" expanded="true" signature="26856:26873" placeholder="DELETE FROM " />
+                <marker date="1460879081570" expanded="true" signature="27158:27204" placeholder="INSERT INTO temp1... " />
+                <marker date="1460879081570" expanded="true" signature="27176:27204" placeholder="SELECT UNIID... ACADEMICS1" />
+                <marker date="1460879081570" expanded="true" signature="27358:27420" placeholder="INSERT INTO temp1... " />
+                <marker date="1460879081570" expanded="true" signature="27376:27420" placeholder="SELECT UNIID... ACADEMICS1" />
+                <marker date="1460879081570" expanded="true" signature="27653:27758" placeholder="INSERT INTO temp2... " />
+                <marker date="1460879081570" expanded="true" signature="27671:27758" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460879081570" expanded="true" signature="27734:27757" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460879081570" expanded="true" signature="27852:27869" placeholder="DELETE FROM " />
+                <marker date="1460879081570" expanded="true" signature="28139:28262" placeholder="INSERT INTO temp1... " />
+                <marker date="1460879081570" expanded="true" signature="28157:28262" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460879081570" expanded="true" signature="28238:28261" placeholder="SELECT UNIID... temp2" />
+                <marker date="1460879081570" expanded="true" signature="28416:28501" placeholder="INSERT INTO temp1... " />
+                <marker date="1460879081570" expanded="true" signature="28434:28501" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460879081570" expanded="true" signature="28477:28500" placeholder="SELECT UNIID... temp2" />
+                <marker date="1460879081570" expanded="true" signature="28621:28638" placeholder="DELETE FROM " />
+                <marker date="1460879081570" expanded="true" signature="28949:29033" placeholder="INSERT INTO temp2... " />
+                <marker date="1460879081570" expanded="true" signature="28967:29033" placeholder="SELECT UNIID... UNITYPE" />
+                <marker date="1460879081570" expanded="true" signature="29009:29032" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460879081570" expanded="true" signature="29187:29285" placeholder="INSERT INTO temp2... " />
+                <marker date="1460879081570" expanded="true" signature="29205:29285" placeholder="SELECT UNIID... UNITYPE" />
+                <marker date="1460879081570" expanded="true" signature="29261:29284" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460879081570" expanded="true" signature="29405:29422" placeholder="DELETE FROM " />
+                <marker date="1460879081570" expanded="true" signature="33537:33646" placeholder="INSERT INTO temp1... " />
+                <marker date="1460879081570" expanded="true" signature="33555:33646" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460879081570" expanded="true" signature="33622:33645" placeholder="SELECT UNIID... temp2" />
+                <marker date="1460879081570" expanded="true" signature="33740:33757" placeholder="DELETE FROM " />
+                <marker date="1460879081570" expanded="true" signature="33862:33939" placeholder="SELECT * FRO... COLLEGE1" />
+                <marker date="1460879081570" expanded="true" signature="33901:33924" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460879081570" expanded="true" signature="34124:34143" placeholder="..." />
+                <marker date="1460879081570" expanded="true" signature="34183:34202" placeholder="..." />
+                <marker date="1460879081570" expanded="true" signature="34242:34255" placeholder="..." />
+                <marker date="1460879081570" expanded="true" signature="34305:34318" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="collegelistingsizeasc.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sortandrank/collegelistingsizeasc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.13740458">
+              <caret line="406" column="29" selection-start-line="406" selection-start-column="29" selection-end-line="406" selection-end-column="29" />
+              <folding>
+                <marker date="1460879081585" expanded="true" signature="24463:24662" placeholder="..." />
+                <marker date="1460879081585" expanded="true" signature="24491:24655" placeholder="..." />
+                <marker date="1460879081585" expanded="true" signature="24504:24644" placeholder="..." />
+                <marker date="1460879081585" expanded="true" signature="26757:26774" placeholder="DELETE FROM " />
+                <marker date="1460879081585" expanded="true" signature="26856:26873" placeholder="DELETE FROM " />
+                <marker date="1460879081585" expanded="true" signature="27158:27204" placeholder="INSERT INTO temp1... " />
+                <marker date="1460879081585" expanded="true" signature="27176:27204" placeholder="SELECT UNIID... ACADEMICS1" />
+                <marker date="1460879081585" expanded="true" signature="27358:27420" placeholder="INSERT INTO temp1... " />
+                <marker date="1460879081585" expanded="true" signature="27376:27420" placeholder="SELECT UNIID... ACADEMICS1" />
+                <marker date="1460879081585" expanded="true" signature="27653:27758" placeholder="INSERT INTO temp2... " />
+                <marker date="1460879081585" expanded="true" signature="27671:27758" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460879081585" expanded="true" signature="27734:27757" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460879081585" expanded="true" signature="27852:27869" placeholder="DELETE FROM " />
+                <marker date="1460879081585" expanded="true" signature="28139:28262" placeholder="INSERT INTO temp1... " />
+                <marker date="1460879081585" expanded="true" signature="28157:28262" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460879081585" expanded="true" signature="28238:28261" placeholder="SELECT UNIID... temp2" />
+                <marker date="1460879081585" expanded="true" signature="28416:28501" placeholder="INSERT INTO temp1... " />
+                <marker date="1460879081585" expanded="true" signature="28434:28501" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460879081585" expanded="true" signature="28477:28500" placeholder="SELECT UNIID... temp2" />
+                <marker date="1460879081585" expanded="true" signature="28621:28638" placeholder="DELETE FROM " />
+                <marker date="1460879081585" expanded="true" signature="28949:29033" placeholder="INSERT INTO temp2... " />
+                <marker date="1460879081585" expanded="true" signature="28967:29033" placeholder="SELECT UNIID... UNITYPE" />
+                <marker date="1460879081585" expanded="true" signature="29009:29032" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460879081585" expanded="true" signature="29187:29285" placeholder="INSERT INTO temp2... " />
+                <marker date="1460879081585" expanded="true" signature="29205:29285" placeholder="SELECT UNIID... UNITYPE" />
+                <marker date="1460879081585" expanded="true" signature="29261:29284" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460879081585" expanded="true" signature="29405:29422" placeholder="DELETE FROM " />
+                <marker date="1460879081585" expanded="true" signature="33527:33636" placeholder="INSERT INTO temp1... " />
+                <marker date="1460879081585" expanded="true" signature="33545:33636" placeholder="SELECT UNIID... COLLEGE1" />
+                <marker date="1460879081585" expanded="true" signature="33612:33635" placeholder="SELECT UNIID... temp2" />
+                <marker date="1460879081585" expanded="true" signature="33730:33747" placeholder="DELETE FROM " />
+                <marker date="1460879081585" expanded="true" signature="33852:33929" placeholder="SELECT * FRO... COLLEGE1" />
+                <marker date="1460879081585" expanded="true" signature="33891:33914" placeholder="SELECT UNIID... temp1" />
+                <marker date="1460879081585" expanded="true" signature="34114:34133" placeholder="..." />
+                <marker date="1460879081585" expanded="true" signature="34173:34192" placeholder="..." />
+                <marker date="1460879081585" expanded="true" signature="34232:34245" placeholder="..." />
+                <marker date="1460879081585" expanded="true" signature="34295:34308" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/collegeranking.php" />
+        <option value="$PROJECT_DIR$/sortandrank/collegerankingcostofatt.php" />
+        <option value="$PROJECT_DIR$/sortandrank/collegerankinggraduationrate.php" />
+        <option value="$PROJECT_DIR$/sortandrank/collegerankingretentionrate.php" />
+        <option value="$PROJECT_DIR$/sortandrank/collegerankingsize.php" />
+        <option value="$PROJECT_DIR$/collegelist.php" />
+        <option value="$PROJECT_DIR$/sortandrank/collegelistingname.php" />
+        <option value="$PROJECT_DIR$/sortandrank/collegelistinggraduationrate.php" />
+        <option value="$PROJECT_DIR$/sortandrank/collegelistingcostofatt.php" />
+        <option value="$PROJECT_DIR$/sortandrank/collegelistingnameretentionrate.php" />
+        <option value="$PROJECT_DIR$/sortandrank/collegelistingsizeasc.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="College-Search-Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="College-Search-Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="College-Search-Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="College-Search-Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="College-Search-Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sortandrank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="College-Search-Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="College-Search-Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aeda8c32-8608-4616-bbb0-68535d781139" name="Default" comment="" />
+      <created>1460832804325</created>
+      <option name="number" value="Default" />
+      <updated>1460832804325</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11066398">
+          <caret line="208" column="57" selection-start-line="208" selection-start-column="18" selection-end-line="208" selection-end-column="57" />
+          <folding>
+            <marker date="1460874805072" expanded="true" signature="23476:23681" placeholder="..." />
+            <marker date="1460874805072" expanded="true" signature="23506:23670" placeholder="..." />
+            <marker date="1460874805072" expanded="true" signature="23519:23657" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.692308">
+          <caret line="5078" column="23" selection-start-line="5078" selection-start-column="23" selection-end-line="5078" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sortandrank/collegerankingcostofatt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="36.396225">
+          <caret line="281" column="43" selection-start-line="281" selection-start-column="40" selection-end-line="281" selection-end-column="43" />
+          <folding>
+            <marker date="1460877810003" expanded="true" signature="24447:24646" placeholder="..." />
+            <marker date="1460877810003" expanded="true" signature="24475:24639" placeholder="..." />
+            <marker date="1460877810003" expanded="true" signature="24488:24628" placeholder="..." />
+            <marker date="1460877810003" expanded="true" signature="26290:26326" placeholder="SELECT * FRO... COLLEGE1" />
+            <marker date="1460877810003" expanded="true" signature="26511:26530" placeholder="..." />
+            <marker date="1460877810003" expanded="true" signature="26570:26589" placeholder="..." />
+            <marker date="1460877810003" expanded="true" signature="26629:26642" placeholder="..." />
+            <marker date="1460877810003" expanded="true" signature="26692:26705" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sortandrank/collegerankingretentionrate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="36.92453">
+          <caret line="281" column="43" selection-start-line="281" selection-start-column="43" selection-end-line="281" selection-end-column="43" />
+          <folding>
+            <marker date="1460877879794" expanded="true" signature="24447:24646" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="24475:24639" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="24488:24628" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="26286:26322" placeholder="SELECT * FRO... COLLEGE1" />
+            <marker date="1460877879794" expanded="true" signature="26507:26526" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="26566:26585" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="26625:26638" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="26688:26701" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sortandrank/collegerankinggraduationrate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44665462">
+          <caret line="281" column="43" selection-start-line="281" selection-start-column="43" selection-end-line="281" selection-end-column="43" />
+          <folding>
+            <marker date="1460877879794" expanded="true" signature="24447:24646" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="24475:24639" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="24488:24628" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="26287:26323" placeholder="SELECT * FRO... COLLEGE1" />
+            <marker date="1460877879794" expanded="true" signature="26508:26527" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="26567:26586" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="26626:26639" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="26689:26702" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sortandrank/collegerankingsize.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="22.963415">
+          <caret line="209" column="52" selection-start-line="209" selection-start-column="41" selection-end-line="209" selection-end-column="52" />
+          <folding>
+            <marker date="1460877879794" expanded="true" signature="24447:24646" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="24475:24639" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="24488:24628" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="26291:26327" placeholder="SELECT * FRO... COLLEGE1" />
+            <marker date="1460877879794" expanded="true" signature="26512:26531" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="26571:26590" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="26630:26643" placeholder="..." />
+            <marker date="1460877879794" expanded="true" signature="26693:26706" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sortandrank/collegelistinggraduationrate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="27.731707">
+          <caret line="409" column="63" selection-start-line="409" selection-start-column="29" selection-end-line="409" selection-end-column="63" />
+          <folding>
+            <marker date="1460878855947" expanded="true" signature="24463:24662" placeholder="..." />
+            <marker date="1460878855947" expanded="true" signature="24491:24655" placeholder="..." />
+            <marker date="1460878855947" expanded="true" signature="24504:24644" placeholder="..." />
+            <marker date="1460878855947" expanded="true" signature="26757:26774" placeholder="DELETE FROM " />
+            <marker date="1460878855947" expanded="true" signature="26856:26873" placeholder="DELETE FROM " />
+            <marker date="1460878855947" expanded="true" signature="27158:27204" placeholder="INSERT INTO temp1... " />
+            <marker date="1460878855947" expanded="true" signature="27176:27204" placeholder="SELECT UNIID... ACADEMICS1" />
+            <marker date="1460878855947" expanded="true" signature="27358:27420" placeholder="INSERT INTO temp1... " />
+            <marker date="1460878855947" expanded="true" signature="27376:27420" placeholder="SELECT UNIID... ACADEMICS1" />
+            <marker date="1460878855947" expanded="true" signature="27653:27758" placeholder="INSERT INTO temp2... " />
+            <marker date="1460878855947" expanded="true" signature="27671:27758" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460878855947" expanded="true" signature="27734:27757" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460878855947" expanded="true" signature="27852:27869" placeholder="DELETE FROM " />
+            <marker date="1460878855947" expanded="true" signature="28139:28262" placeholder="INSERT INTO temp1... " />
+            <marker date="1460878855947" expanded="true" signature="28157:28262" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460878855947" expanded="true" signature="28238:28261" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460878855947" expanded="true" signature="28416:28501" placeholder="INSERT INTO temp1... " />
+            <marker date="1460878855947" expanded="true" signature="28434:28501" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460878855947" expanded="true" signature="28477:28500" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460878855947" expanded="true" signature="28621:28638" placeholder="DELETE FROM " />
+            <marker date="1460878855947" expanded="true" signature="28949:29033" placeholder="INSERT INTO temp2... " />
+            <marker date="1460878855947" expanded="true" signature="28967:29033" placeholder="SELECT UNIID... UNITYPE" />
+            <marker date="1460878855947" expanded="true" signature="29009:29032" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460878855947" expanded="true" signature="29187:29285" placeholder="INSERT INTO temp2... " />
+            <marker date="1460878855947" expanded="true" signature="29205:29285" placeholder="SELECT UNIID... UNITYPE" />
+            <marker date="1460878855947" expanded="true" signature="29261:29284" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460878855947" expanded="true" signature="29405:29422" placeholder="DELETE FROM " />
+            <marker date="1460878855947" expanded="true" signature="33539:33648" placeholder="INSERT INTO temp1... " />
+            <marker date="1460878855947" expanded="true" signature="33557:33648" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460878855947" expanded="true" signature="33624:33647" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460878855947" expanded="true" signature="33742:33759" placeholder="DELETE FROM " />
+            <marker date="1460878855947" expanded="true" signature="33864:33941" placeholder="SELECT * FRO... COLLEGE1" />
+            <marker date="1460878855947" expanded="true" signature="33903:33926" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460878855947" expanded="true" signature="34126:34145" placeholder="..." />
+            <marker date="1460878855947" expanded="true" signature="34185:34204" placeholder="..." />
+            <marker date="1460878855947" expanded="true" signature="34244:34257" placeholder="..." />
+            <marker date="1460878855947" expanded="true" signature="34307:34320" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sortandrank/collegelistingcostofatt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9146341">
+          <caret line="408" column="16" selection-start-line="408" selection-start-column="16" selection-end-line="410" selection-end-column="30" />
+          <folding>
+            <marker date="1460879081570" expanded="true" signature="24463:24662" placeholder="..." />
+            <marker date="1460879081570" expanded="true" signature="24491:24655" placeholder="..." />
+            <marker date="1460879081570" expanded="true" signature="24504:24644" placeholder="..." />
+            <marker date="1460879081570" expanded="true" signature="26757:26774" placeholder="DELETE FROM " />
+            <marker date="1460879081570" expanded="true" signature="26856:26873" placeholder="DELETE FROM " />
+            <marker date="1460879081570" expanded="true" signature="27158:27204" placeholder="INSERT INTO temp1... " />
+            <marker date="1460879081570" expanded="true" signature="27176:27204" placeholder="SELECT UNIID... ACADEMICS1" />
+            <marker date="1460879081570" expanded="true" signature="27358:27420" placeholder="INSERT INTO temp1... " />
+            <marker date="1460879081570" expanded="true" signature="27376:27420" placeholder="SELECT UNIID... ACADEMICS1" />
+            <marker date="1460879081570" expanded="true" signature="27653:27758" placeholder="INSERT INTO temp2... " />
+            <marker date="1460879081570" expanded="true" signature="27671:27758" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460879081570" expanded="true" signature="27734:27757" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460879081570" expanded="true" signature="27852:27869" placeholder="DELETE FROM " />
+            <marker date="1460879081570" expanded="true" signature="28139:28262" placeholder="INSERT INTO temp1... " />
+            <marker date="1460879081570" expanded="true" signature="28157:28262" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460879081570" expanded="true" signature="28238:28261" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460879081570" expanded="true" signature="28416:28501" placeholder="INSERT INTO temp1... " />
+            <marker date="1460879081570" expanded="true" signature="28434:28501" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460879081570" expanded="true" signature="28477:28500" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460879081570" expanded="true" signature="28621:28638" placeholder="DELETE FROM " />
+            <marker date="1460879081570" expanded="true" signature="28949:29033" placeholder="INSERT INTO temp2... " />
+            <marker date="1460879081570" expanded="true" signature="28967:29033" placeholder="SELECT UNIID... UNITYPE" />
+            <marker date="1460879081570" expanded="true" signature="29009:29032" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460879081570" expanded="true" signature="29187:29285" placeholder="INSERT INTO temp2... " />
+            <marker date="1460879081570" expanded="true" signature="29205:29285" placeholder="SELECT UNIID... UNITYPE" />
+            <marker date="1460879081570" expanded="true" signature="29261:29284" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460879081570" expanded="true" signature="29405:29422" placeholder="DELETE FROM " />
+            <marker date="1460879081570" expanded="true" signature="33542:33651" placeholder="INSERT INTO temp1... " />
+            <marker date="1460879081570" expanded="true" signature="33560:33651" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460879081570" expanded="true" signature="33627:33650" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460879081570" expanded="true" signature="33745:33762" placeholder="DELETE FROM " />
+            <marker date="1460879081570" expanded="true" signature="33867:33944" placeholder="SELECT * FRO... COLLEGE1" />
+            <marker date="1460879081570" expanded="true" signature="33906:33929" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460879081570" expanded="true" signature="34129:34148" placeholder="..." />
+            <marker date="1460879081570" expanded="true" signature="34188:34207" placeholder="..." />
+            <marker date="1460879081570" expanded="true" signature="34247:34260" placeholder="..." />
+            <marker date="1460879081570" expanded="true" signature="34310:34323" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sortandrank/collegelistingname.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4942748">
+          <caret line="408" column="16" selection-start-line="408" selection-start-column="16" selection-end-line="410" selection-end-column="30" />
+          <folding>
+            <marker date="1460878792329" expanded="true" signature="24463:24662" placeholder="..." />
+            <marker date="1460878792329" expanded="true" signature="24491:24655" placeholder="..." />
+            <marker date="1460878792329" expanded="true" signature="24504:24644" placeholder="..." />
+            <marker date="1460878792329" expanded="true" signature="26757:26774" placeholder="DELETE FROM " />
+            <marker date="1460878792329" expanded="true" signature="26856:26873" placeholder="DELETE FROM " />
+            <marker date="1460878792329" expanded="true" signature="27158:27204" placeholder="INSERT INTO temp1... " />
+            <marker date="1460878792329" expanded="true" signature="27176:27204" placeholder="SELECT UNIID... ACADEMICS1" />
+            <marker date="1460878792329" expanded="true" signature="27358:27420" placeholder="INSERT INTO temp1... " />
+            <marker date="1460878792329" expanded="true" signature="27376:27420" placeholder="SELECT UNIID... ACADEMICS1" />
+            <marker date="1460878792329" expanded="true" signature="27653:27758" placeholder="INSERT INTO temp2... " />
+            <marker date="1460878792329" expanded="true" signature="27671:27758" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460878792329" expanded="true" signature="27734:27757" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460878792329" expanded="true" signature="27852:27869" placeholder="DELETE FROM " />
+            <marker date="1460878792329" expanded="true" signature="28139:28262" placeholder="INSERT INTO temp1... " />
+            <marker date="1460878792329" expanded="true" signature="28157:28262" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460878792329" expanded="true" signature="28238:28261" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460878792329" expanded="true" signature="28416:28501" placeholder="INSERT INTO temp1... " />
+            <marker date="1460878792329" expanded="true" signature="28434:28501" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460878792329" expanded="true" signature="28477:28500" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460878792329" expanded="true" signature="28621:28638" placeholder="DELETE FROM " />
+            <marker date="1460878792329" expanded="true" signature="28949:29033" placeholder="INSERT INTO temp2... " />
+            <marker date="1460878792329" expanded="true" signature="28967:29033" placeholder="SELECT UNIID... UNITYPE" />
+            <marker date="1460878792329" expanded="true" signature="29009:29032" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460878792329" expanded="true" signature="29187:29285" placeholder="INSERT INTO temp2... " />
+            <marker date="1460878792329" expanded="true" signature="29205:29285" placeholder="SELECT UNIID... UNITYPE" />
+            <marker date="1460878792329" expanded="true" signature="29261:29284" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460878792329" expanded="true" signature="29405:29422" placeholder="DELETE FROM " />
+            <marker date="1460878792329" expanded="true" signature="33542:33651" placeholder="INSERT INTO temp1... " />
+            <marker date="1460878792329" expanded="true" signature="33560:33651" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460878792329" expanded="true" signature="33627:33650" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460878792329" expanded="true" signature="33745:33762" placeholder="DELETE FROM " />
+            <marker date="1460878792329" expanded="true" signature="33867:33944" placeholder="SELECT * FRO... COLLEGE1" />
+            <marker date="1460878792329" expanded="true" signature="33906:33929" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460878792329" expanded="true" signature="34129:34148" placeholder="..." />
+            <marker date="1460878792329" expanded="true" signature="34188:34207" placeholder="..." />
+            <marker date="1460878792329" expanded="true" signature="34247:34260" placeholder="..." />
+            <marker date="1460878792329" expanded="true" signature="34310:34323" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collegelist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="41.490566">
+          <caret line="408" column="24" selection-start-line="408" selection-start-column="16" selection-end-line="410" selection-end-column="30" />
+          <folding>
+            <marker date="1460878407878" expanded="true" signature="24460:24659" placeholder="..." />
+            <marker date="1460878407878" expanded="true" signature="24488:24652" placeholder="..." />
+            <marker date="1460878407878" expanded="true" signature="24501:24641" placeholder="..." />
+            <marker date="1460878407878" expanded="true" signature="26750:26767" placeholder="DELETE FROM " />
+            <marker date="1460878407878" expanded="true" signature="26837:26854" placeholder="DELETE FROM " />
+            <marker date="1460878407878" expanded="true" signature="27080:27126" placeholder="INSERT INTO temp1... " />
+            <marker date="1460878407878" expanded="true" signature="27098:27126" placeholder="SELECT UNIID... ACADEMICS1" />
+            <marker date="1460878407878" expanded="true" signature="27214:27276" placeholder="INSERT INTO temp1... " />
+            <marker date="1460878407878" expanded="true" signature="27232:27276" placeholder="SELECT UNIID... ACADEMICS1" />
+            <marker date="1460878407878" expanded="true" signature="27453:27558" placeholder="INSERT INTO temp2... " />
+            <marker date="1460878407878" expanded="true" signature="27471:27558" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460878407878" expanded="true" signature="27534:27557" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460878407878" expanded="true" signature="27622:27639" placeholder="DELETE FROM " />
+            <marker date="1460878407878" expanded="true" signature="27850:27973" placeholder="INSERT INTO temp1... " />
+            <marker date="1460878407878" expanded="true" signature="27868:27973" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460878407878" expanded="true" signature="27949:27972" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460878407878" expanded="true" signature="28061:28146" placeholder="INSERT INTO temp1... " />
+            <marker date="1460878407878" expanded="true" signature="28079:28146" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460878407878" expanded="true" signature="28122:28145" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460878407878" expanded="true" signature="28218:28235" placeholder="DELETE FROM " />
+            <marker date="1460878407878" expanded="true" signature="28472:28556" placeholder="INSERT INTO temp2... " />
+            <marker date="1460878407878" expanded="true" signature="28490:28556" placeholder="SELECT UNIID... UNITYPE" />
+            <marker date="1460878407878" expanded="true" signature="28532:28555" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460878407878" expanded="true" signature="28644:28742" placeholder="INSERT INTO temp2... " />
+            <marker date="1460878407878" expanded="true" signature="28662:28742" placeholder="SELECT UNIID... UNITYPE" />
+            <marker date="1460878407878" expanded="true" signature="28718:28741" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460878407878" expanded="true" signature="28814:28831" placeholder="DELETE FROM " />
+            <marker date="1460878407878" expanded="true" signature="32831:32940" placeholder="INSERT INTO temp1... " />
+            <marker date="1460878407878" expanded="true" signature="32849:32940" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460878407878" expanded="true" signature="32916:32939" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460878407878" expanded="true" signature="33004:33021" placeholder="DELETE FROM " />
+            <marker date="1460878407878" expanded="true" signature="33115:33178" placeholder="SELECT * FRO... COLLEGE1" />
+            <marker date="1460878407878" expanded="true" signature="33154:33177" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460878407878" expanded="true" signature="33363:33382" placeholder="..." />
+            <marker date="1460878407878" expanded="true" signature="33422:33441" placeholder="..." />
+            <marker date="1460878407878" expanded="true" signature="33481:33494" placeholder="..." />
+            <marker date="1460878407878" expanded="true" signature="33544:33557" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collegeranking.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="31.226416">
+          <caret line="209" column="25" selection-start-line="209" selection-start-column="25" selection-end-line="209" selection-end-column="62" />
+          <folding>
+            <marker date="1460877399508" expanded="true" signature="24444:24643" placeholder="..." />
+            <marker date="1460877399508" expanded="true" signature="24472:24636" placeholder="..." />
+            <marker date="1460877399508" expanded="true" signature="24485:24625" placeholder="..." />
+            <marker date="1460877399508" expanded="true" signature="26266:26302" placeholder="SELECT * FRO... COLLEGE1" />
+            <marker date="1460877399508" expanded="true" signature="26487:26506" placeholder="..." />
+            <marker date="1460877399508" expanded="true" signature="26546:26565" placeholder="..." />
+            <marker date="1460877399508" expanded="true" signature="26605:26618" placeholder="..." />
+            <marker date="1460877399508" expanded="true" signature="26668:26681" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sortandrank/collegelistingnameretentionrate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2926829">
+          <caret line="407" column="16" selection-start-line="407" selection-start-column="16" selection-end-line="409" selection-end-column="30" />
+          <folding>
+            <marker date="1460879081570" expanded="true" signature="24463:24662" placeholder="..." />
+            <marker date="1460879081570" expanded="true" signature="24491:24655" placeholder="..." />
+            <marker date="1460879081570" expanded="true" signature="24504:24644" placeholder="..." />
+            <marker date="1460879081570" expanded="true" signature="26757:26774" placeholder="DELETE FROM " />
+            <marker date="1460879081570" expanded="true" signature="26856:26873" placeholder="DELETE FROM " />
+            <marker date="1460879081570" expanded="true" signature="27158:27204" placeholder="INSERT INTO temp1... " />
+            <marker date="1460879081570" expanded="true" signature="27176:27204" placeholder="SELECT UNIID... ACADEMICS1" />
+            <marker date="1460879081570" expanded="true" signature="27358:27420" placeholder="INSERT INTO temp1... " />
+            <marker date="1460879081570" expanded="true" signature="27376:27420" placeholder="SELECT UNIID... ACADEMICS1" />
+            <marker date="1460879081570" expanded="true" signature="27653:27758" placeholder="INSERT INTO temp2... " />
+            <marker date="1460879081570" expanded="true" signature="27671:27758" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460879081570" expanded="true" signature="27734:27757" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460879081570" expanded="true" signature="27852:27869" placeholder="DELETE FROM " />
+            <marker date="1460879081570" expanded="true" signature="28139:28262" placeholder="INSERT INTO temp1... " />
+            <marker date="1460879081570" expanded="true" signature="28157:28262" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460879081570" expanded="true" signature="28238:28261" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460879081570" expanded="true" signature="28416:28501" placeholder="INSERT INTO temp1... " />
+            <marker date="1460879081570" expanded="true" signature="28434:28501" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460879081570" expanded="true" signature="28477:28500" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460879081570" expanded="true" signature="28621:28638" placeholder="DELETE FROM " />
+            <marker date="1460879081570" expanded="true" signature="28949:29033" placeholder="INSERT INTO temp2... " />
+            <marker date="1460879081570" expanded="true" signature="28967:29033" placeholder="SELECT UNIID... UNITYPE" />
+            <marker date="1460879081570" expanded="true" signature="29009:29032" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460879081570" expanded="true" signature="29187:29285" placeholder="INSERT INTO temp2... " />
+            <marker date="1460879081570" expanded="true" signature="29205:29285" placeholder="SELECT UNIID... UNITYPE" />
+            <marker date="1460879081570" expanded="true" signature="29261:29284" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460879081570" expanded="true" signature="29405:29422" placeholder="DELETE FROM " />
+            <marker date="1460879081570" expanded="true" signature="33537:33646" placeholder="INSERT INTO temp1... " />
+            <marker date="1460879081570" expanded="true" signature="33555:33646" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460879081570" expanded="true" signature="33622:33645" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460879081570" expanded="true" signature="33740:33757" placeholder="DELETE FROM " />
+            <marker date="1460879081570" expanded="true" signature="33862:33939" placeholder="SELECT * FRO... COLLEGE1" />
+            <marker date="1460879081570" expanded="true" signature="33901:33924" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460879081570" expanded="true" signature="34124:34143" placeholder="..." />
+            <marker date="1460879081570" expanded="true" signature="34183:34202" placeholder="..." />
+            <marker date="1460879081570" expanded="true" signature="34242:34255" placeholder="..." />
+            <marker date="1460879081570" expanded="true" signature="34305:34318" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sortandrank/collegelistingsizeasc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13740458">
+          <caret line="406" column="29" selection-start-line="406" selection-start-column="29" selection-end-line="406" selection-end-column="29" />
+          <folding>
+            <marker date="1460879081585" expanded="true" signature="24463:24662" placeholder="..." />
+            <marker date="1460879081585" expanded="true" signature="24491:24655" placeholder="..." />
+            <marker date="1460879081585" expanded="true" signature="24504:24644" placeholder="..." />
+            <marker date="1460879081585" expanded="true" signature="26757:26774" placeholder="DELETE FROM " />
+            <marker date="1460879081585" expanded="true" signature="26856:26873" placeholder="DELETE FROM " />
+            <marker date="1460879081585" expanded="true" signature="27158:27204" placeholder="INSERT INTO temp1... " />
+            <marker date="1460879081585" expanded="true" signature="27176:27204" placeholder="SELECT UNIID... ACADEMICS1" />
+            <marker date="1460879081585" expanded="true" signature="27358:27420" placeholder="INSERT INTO temp1... " />
+            <marker date="1460879081585" expanded="true" signature="27376:27420" placeholder="SELECT UNIID... ACADEMICS1" />
+            <marker date="1460879081585" expanded="true" signature="27653:27758" placeholder="INSERT INTO temp2... " />
+            <marker date="1460879081585" expanded="true" signature="27671:27758" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460879081585" expanded="true" signature="27734:27757" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460879081585" expanded="true" signature="27852:27869" placeholder="DELETE FROM " />
+            <marker date="1460879081585" expanded="true" signature="28139:28262" placeholder="INSERT INTO temp1... " />
+            <marker date="1460879081585" expanded="true" signature="28157:28262" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460879081585" expanded="true" signature="28238:28261" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460879081585" expanded="true" signature="28416:28501" placeholder="INSERT INTO temp1... " />
+            <marker date="1460879081585" expanded="true" signature="28434:28501" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460879081585" expanded="true" signature="28477:28500" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460879081585" expanded="true" signature="28621:28638" placeholder="DELETE FROM " />
+            <marker date="1460879081585" expanded="true" signature="28949:29033" placeholder="INSERT INTO temp2... " />
+            <marker date="1460879081585" expanded="true" signature="28967:29033" placeholder="SELECT UNIID... UNITYPE" />
+            <marker date="1460879081585" expanded="true" signature="29009:29032" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460879081585" expanded="true" signature="29187:29285" placeholder="INSERT INTO temp2... " />
+            <marker date="1460879081585" expanded="true" signature="29205:29285" placeholder="SELECT UNIID... UNITYPE" />
+            <marker date="1460879081585" expanded="true" signature="29261:29284" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460879081585" expanded="true" signature="29405:29422" placeholder="DELETE FROM " />
+            <marker date="1460879081585" expanded="true" signature="33527:33636" placeholder="INSERT INTO temp1... " />
+            <marker date="1460879081585" expanded="true" signature="33545:33636" placeholder="SELECT UNIID... COLLEGE1" />
+            <marker date="1460879081585" expanded="true" signature="33612:33635" placeholder="SELECT UNIID... temp2" />
+            <marker date="1460879081585" expanded="true" signature="33730:33747" placeholder="DELETE FROM " />
+            <marker date="1460879081585" expanded="true" signature="33852:33929" placeholder="SELECT * FRO... COLLEGE1" />
+            <marker date="1460879081585" expanded="true" signature="33891:33914" placeholder="SELECT UNIID... temp1" />
+            <marker date="1460879081585" expanded="true" signature="34114:34133" placeholder="..." />
+            <marker date="1460879081585" expanded="true" signature="34173:34192" placeholder="..." />
+            <marker date="1460879081585" expanded="true" signature="34232:34245" placeholder="..." />
+            <marker date="1460879081585" expanded="true" signature="34295:34308" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
