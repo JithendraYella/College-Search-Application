@@ -231,6 +231,9 @@
 
     <main>
       <!-- background image -->
+	  
+	  
+	  
 <div class="home-splash"></div>
 
 <!-- search and -->

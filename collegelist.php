@@ -245,7 +245,7 @@
             echo "<label for=\"select-sort\">SORT BY :</label>";
             echo "<input class=\"sortbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$totalstringnamesort'\" value=\"Alphabetical Order\">";
             echo "<input class=\"sortbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$totalstringgraduationrate'\" value=\"Graduation Rate\">";
-            echo "<input class=\"sortbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$totalstringsortsizeascending'\" value=\"Size(Ascending)\">";
+            echo "<input class=\"sortbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$totalstringsortsizeascending'\" value=\"Size\">";
             echo "<input class=\"sortbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$totalstringcostofattendance'\" value=\"Cost of Attendance\">";
             echo "<input class=\"sortbutton\" type=button onClick=\"location.href='/College-Search-Application/sortandrank/$totalstringretentionrate'\" value=\"Retention Rate\">";
             ?>
@@ -397,7 +397,7 @@
 
 				if (isset($_GET['name'])) {
                     $name = $_GET['name'];					
-					$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM COLLEGE1 WHERE NAME LIKE '%$name%' AND UNIID IN (SELECT UNIID FROM temp2) ");
+					$thisisit = oci_parse($conn, "INSERT INTO temp1 SELECT UNIID FROM COLLEGE1 WHERE UPPER(NAME) LIKE UPPER('%$name%') AND UNIID IN (SELECT UNIID FROM temp2) ");
 //					AND UNIID IN (SELECT UNIID FROM temp2)");
 					oci_execute($thisisit);
 					echo $name;
@@ -445,19 +445,19 @@
                 echo '<br/>';
                 }
                 if (isset($state)) {
-                echo $state;
+                echo "State: ".$state;
                 echo '<br/>';
                 }
                 if (isset($zip)) {
-                echo $zip;
+                echo "Zip: ".$zip;
                 echo '<br/>';
                 }
                 if (isset($prog)) {
-                echo $prog;
+                echo "program: ".$prog;
                 echo '<br/>';
                 }
                 if (isset($miss)) {
-                echo $miss;
+                echo "Missionary: ".$miss;
                 echo '<br/>';
                 }
                 if (isset($religious)) {
@@ -465,10 +465,12 @@
                     echo '<br/>';
                 }
                 if (isset($size)){
+					echo "Student body size: ";
                     print_r(array_values($size));
                     echo '<br/>';
                 }
                 if (isset($control)){
+					echo "University Type: ";
                     print_r(array_values($control));
                     echo '<br/>';
                 /*for ($y = 0; $y < count($control); $y++) {

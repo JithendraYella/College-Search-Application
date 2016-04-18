@@ -252,7 +252,7 @@
         <br/>
         <br/>
         <div class="rankstyling">
-            <p><h1>COLLEGE RANKINGS - COST OF ATTENDANCE</h1></p>
+            <p><h1>COLLEGE RANKINGS - GRADUATION RATE</h1></p>
         </div>
 
         <div class="queryresult">
@@ -263,7 +263,7 @@
                 echo 'Failed to connect to Oracle';
             }
             else {
-                $stid = oci_parse($conn, "SELECT * FROM COLLEGE1 ORDER BY NAME");
+                $stid = oci_parse($conn, "SELECT * FROM COLLEGE1 c, cost ca WHERE c.UNIID = ca.UNIID ORDER BY ca.costofattendance DESC");
                 oci_execute($stid);
 
                 echo "<br>";

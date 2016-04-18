@@ -263,7 +263,7 @@
                 echo 'Failed to connect to Oracle';
             }
             else {
-                $stid = oci_parse($conn, "SELECT * FROM COLLEGE1 ORDER BY NAME");
+                $stid = oci_parse($conn, "SELECT * FROM COLLEGE1 c, outcome1 o WHERE c.UNIID = o.UNIID ORDER BY o.GRADUATIONRATE DESC");
                 oci_execute($stid);
 
                 echo "<br>";
